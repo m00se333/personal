@@ -1,14 +1,14 @@
 {
-  "name": "react-node-starter",
-  "version": "0.2.0",
-  "description": "an example for deploying a React + NodeJS app to Heroku",
+  "name": "personal-site",
+  "version": "0.0.2",
+  "description": "express back end, React front end personal website",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "nodemon server.js",
     "postinstall": "webpack -p --config webpack.prod.config.js"
   },
-  "author": "",
+  "author": "Maurice E. Tafolla Cunningham",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.7.6",
@@ -18,8 +18,12 @@
     "css-loader": "^0.23.1",
     "express": "^4.13.4",
     "node-sass": "^3.4.2",
-    "react": "^15.0.1",
-    "react-dom": "^15.0.1",
+    "react": "^15.0.0",
+    "react-addons-css-transition-group": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "react-catalyst": "0.3.0",
+    "react-mixin": "3.0.0",
+    "react-router": "1.0.0-rc3",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14"
