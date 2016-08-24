@@ -7,16 +7,21 @@ import createHashHistory from 'history/lib/createHashHistory'
 import { Router, Route, Link, IndexRoute } from "react-router";
 const history = createHashHistory({ queryKey: false })
 
+
+// Layout Component //
 var MasterLayout = React.createClass({
   mixins: [History], 
+  
   getInitialState: function(){
     return{
       hello: {}
     }
   },
+
   doSomething: function() {
     console.log('doSomething called by child with value:');
   },
+
   render: function(){
       var childrenWithProps = React.Children.map(this.props.children,
             (child) => React.cloneElement(child, {
@@ -36,16 +41,17 @@ var MasterLayout = React.createClass({
 
   }
 });
-
-var Child = React.createClass({
-    render: function(){
-      return(
-          <div onClick={() => this.props.doSomething(this.props.value)}>Click Me</div>
-        )
-    }
-  });
-
+  
   // Top Level Containers //
+  var Child = React.createClass({
+      render: function(){
+        return(
+            <div onClick={() => this.props.doSomething(this.props.value)}>Click Me</div>
+          )
+      }
+    });
+
+  
   var Navigation = React.createClass({
 
     render: function(){
@@ -63,69 +69,103 @@ var Child = React.createClass({
   });
 
   
-  // Different Blog Components, named Blog for simplicity //
-  var GamesOnHighSettings = React.createClass({
-    render: function(){
-      return <h1>Games on High Settings</h1>
-    }
-  });
+  // Different Blog components for each route //
+  
+      // Games on High Settings //
+      var GamesOnHighSettings = React.createClass({
+        render: function(){
+          return <h1>Games on High Settings</h1>
+        }
+      });
 
-  var Podcast = React.createClass({
-    render: function(){
-      return <h1>Podcast</h1>
-    }
-  });
+      // Podcast //
+      var Podcast = React.createClass({
+        render: function(){
+          return <h1>Podcast</h1>
+        }
+      });
 
-  var Projects = React.createClass({
-    getInitialState: function(){
-      var projects = require("./data/projectsObject");
-      
-      return{
-        projects: projects
-      }
-    },
-    renderProjects: function(){
-      console.log(this.state.projects.first.url);
-    },
-    render: function(){
 
-      return (
-          <div className="postWrapper">
-            <div id="projectsHeader">
-              <h1>Projects</h1>
-            </div>
-            <div id="projectsBody">
-              {this.renderProjects}
-            </div>
-          </div>
-          
-        )
-    }
-  })
+      // Projects //
+      var Projects = React.createClass({
+          getInitialState: function(){
+            var projects = require("./data/projectsObject");
+            
+            return{
+              projects: projects
+            }
 
-  var TestPage = React.createClass({
+          },
 
-    render: function(){
-      return(
-          <div className="postWrapper">
-            <div id="postHeader">
-              <div id="titleDate">
-                <h2>This is a test blog title</h2>
-                <span>1/1/2016</span>
+          renderProjects: function(key){
+
+            var projectDetails = this.state.projects[key];
+
+            var data = {
+                url: projectDetails.url,
+                github: projectDetails.github,
+                desc: projectDetails.description
+            }
+
+            return(
+                <Project id={key} key={key} data={data}/>
+              )
+          },
+
+          render: function(){
+
+            return (
+                <div className="postWrapper">
+                  <div id="projectsHeader">
+                    <h1>Projects</h1>
+                  </div>
+                  <div id="projectsBody">
+                    {Object.keys(this.state.projects).map(this.renderProjects)}
+                  </div>
+                </div>
+                
+              )
+          }
+      })
+
+          var Project = React.createClass({
+              render: function(){
+                var data = this.props.data
+                return(
+                    <div className="project">
+                      <h1>{this.props.id}</h1>
+                      <a href={data.url} target="blank">{data.url}</a>
+                      <a href={data.github} target="blank">{data.github}</a>
+                      <p>{data.desc}</p>
+                    </div>
+                  )
+              }
+          })
+  
+      // The Story So Far //   
+      var TestPage = React.createClass({
+
+        render: function(){
+          return(
+              <div className="postWrapper">
+                <div id="postHeader">
+                  <div id="titleDate">
+                    <h2>This is a test blog title</h2>
+                    <span>1/1/2016</span>
+                  </div>
+                  <div id="testFrame">
+                  </div>
+                </div>
+                <div id="postBody">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
+                </div>
               </div>
-              <div id="testFrame">
-              </div>
-            </div>
-            <div id="postBody">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-            </div>
-          </div>
-        )
-    }
-  })
+            )
+        }
+      })
 
 
 var routes = (
