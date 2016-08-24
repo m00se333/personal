@@ -14,37 +14,25 @@ var MasterLayout = React.createClass({
       hello: {}
     }
   },
-  doSomething: function() {
-    console.log('doSomething called by child with value:');
-  },
+  renderProjects: function(){
+      return(
+          <div>
+            <h1>This better work</h1>
+          </div>
+          )
+    },
   render: function(){
-      var childrenWithProps = React.Children.map(this.props.children,
-            (child) => React.cloneElement(child, {
-                doSomething: this.doSomething
-            })
-          );
-
     return(
-
         <div id="container">
           <Navigation />
           <div id="content">
-            {childrenWithProps}
+            {this.props.children}
           </div>
         </div>
       )
 
   }
 });
-
-var Child = React.createClass({
-    render: function(){
-      return(
-          <div onClick={() => this.props.doSomething(this.props.value)}>Click Me</div>
-        )
-    }
-  });
-
   // Top Level Containers //
   var Navigation = React.createClass({
 
@@ -53,8 +41,6 @@ var Child = React.createClass({
           <div id="navigation">
             <ul>
               <li><Link to="/">The Story So Far...</Link></li>
-              <li><Link to="/games-on-high-settings">Games on High Settings</Link></li>
-              <li><Link to="/podcast">Conversation on High Settings</Link></li>
               <li><Link to="/projects">Projects</Link></li>
             </ul>
           </div>
@@ -62,30 +48,11 @@ var Child = React.createClass({
     }
   });
 
-  
-  // Different Blog Components, named Blog for simplicity //
-  var GamesOnHighSettings = React.createClass({
-    render: function(){
-      return <h1>Games on High Settings</h1>
-    }
-  });
-
-  var Podcast = React.createClass({
-    render: function(){
-      return <h1>Podcast</h1>
-    }
-  });
-
   var Projects = React.createClass({
-    getInitialState: function(){
-      var projects = require("./data/projectsObject");
-      
-      return{
-        projects: projects
-      }
-    },
     renderProjects: function(){
-      console.log(this.state.projects.first.url);
+      return(
+          <h1>Why</h1>
+        )
     },
     render: function(){
 
@@ -101,7 +68,21 @@ var Child = React.createClass({
           
         )
     }
+  });
+
+
+  var Child = React.createClass({
+    render: function(){
+      return(
+          <div onClick={() => this.props.doSomething(this.props.value)}>Click Me</div>
+        )
+    }
   })
+
+  
+
+
+
 
   var TestPage = React.createClass({
 
@@ -132,19 +113,11 @@ var routes = (
           <Router history={history}>
             <Route path="/" component={MasterLayout}>
               <IndexRoute component={TestPage}></IndexRoute>
-              <Child path="/games-on-high-settings" component={GamesOnHighSettings}></Child>
-              <Child path="/podcast" component={Podcast}></Child>
-              <Child path="/projects" component={Projects}></Child>
+              <Route path="/projects" component={Projects}></Route>
             </Route>
           </Router>
   )
 
-var testRoutes = (
-      <MasterLayout>
-        <Child value="1"></Child>
-        <Child value="2"></Child>
-      </MasterLayout>
 
-  )
 
 ReactDOM.render(routes, document.getElementById("app"));

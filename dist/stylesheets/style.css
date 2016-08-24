@@ -1,12 +1,28 @@
+/* Imports */
 #container {
   display: flex;
   height: 100vh;
-  /* Portrait */ }
+  /* Navigation Styles */
+  /* End Navigation Styles */
+  /* End Story so Far Styles */
+  /* Projects Styles */
+  /* End Projects Styles */ }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+    #container {
+      display: flex;
+      height: 100vh;
+      flex-direction: column; } }
   #container #navigation {
-    border: 1px solid black;
     flex: 1;
+    display: flex;
     background: #9b59b6;
-    display: flex; }
+    border: 1px solid black; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      #container #navigation {
+        border: 1px solid black;
+        flex: 1;
+        background: #9b59b6;
+        display: flex; } }
     #container #navigation ul {
       display: flex;
       flex-direction: column;
@@ -15,8 +31,20 @@
       margin: 0 0 0 6%;
       padding: 0;
       align-self: center; }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        #container #navigation ul {
+          display: flex;
+          flex-direction: row;
+          height: 100%;
+          width: 100%;
+          list-style: none;
+          margin: 0 auto; } }
       #container #navigation ul li {
         flex: 1; }
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+          #container #navigation ul li {
+            align-self: center;
+            text-align: center; } }
         #container #navigation ul li a {
           text-decoration: none; }
         #container #navigation ul li a:visited {
@@ -25,33 +53,78 @@
           text-decoration: underline; }
   #container #content {
     border: 1px solid black;
-    flex: 4; }
-    #container #content #postWrapper {
+    flex: 4;
+    overflow: scroll; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      #container #content {
+        flex: 10; } }
+    #container #content .postWrapper {
       display: flex;
-      flex-direction: column; }
-      #container #content #postWrapper #postHeader {
+      flex-direction: column;
+      /* Story So Far Styles */ }
+      #container #content .postWrapper #postHeader {
         display: flex; }
-        #container #content #postWrapper #postHeader h2, #container #content #postWrapper #postHeader #testFrame {
-          flex: 1; }
-      #container #content #postWrapper #testFrame {
-        height: 200px;
-        width: 200px;
-        border: 1px solid black; }
-      #container #content #postWrapper #postBody {
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+          #container #content .postWrapper #postHeader {
+            flex-direction: column; } }
+        #container #content .postWrapper #postHeader #titleDate {
+          flex: 1.25;
+          margin: 10% 0 0 2%;
+          display: flex;
+          flex-direction: column; }
+          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            #container #content .postWrapper #postHeader #titleDate {
+              display: flex;
+              flex-direction: column;
+              align-self: center;
+              margin: 0; } }
+          #container #content .postWrapper #postHeader #titleDate h2 {
+            font-size: 4vw;
+            align-self: center;
+            order: 1; }
+            @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+              #container #content .postWrapper #postHeader #titleDate h2 {
+                font-size: 7vw;
+                margin: 2% 0 2% 0; } }
+          #container #content .postWrapper #postHeader #titleDate span {
+            margin: 0 0 0 7%;
+            align-self: auto;
+            font-size: 2vw;
+            order: 2; }
+            @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+              #container #content .postWrapper #postHeader #titleDate span {
+                align-self: center;
+                margin: 0;
+                font-size: 5vw; } }
+        #container #content .postWrapper #postHeader #testFrame {
+          height: 22vw;
+          width: 200px;
+          border: 1px solid black;
+          flex: .75;
+          margin: 5% 2% 5% 0%;
+          order: 1; }
+          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+            #container #content .postWrapper #postHeader #testFrame {
+              align-self: center;
+              height: 30vw;
+              width: 50%; } }
+      #container #content .postWrapper #postBody {
         display: flex;
-        flex-wrap: wrap; }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    #container #navigation {
-      border: 1px solid black;
-      flex: 1;
-      background: #9b59b6;
-      display: flex; }
-      #container #navigation ul {
-        flex-wrap: wrap; }
-        #container #navigation ul li {
-          flex: 1 1 50%; }
-    #container #content {
-      border: 1px solid black;
-      flex: 4; } }
+        flex-wrap: wrap;
+        font-size: 1.6vw;
+        overflow: scroll;
+        padding: 0 5%; }
+        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+          #container #content .postWrapper #postBody {
+            padding: 0 4%; } }
+  #container #projectsHeader {
+    display: flex;
+    align-self: center;
+    margin: 5% 0; }
+    #container #projectsHeader h1 {
+      margin: 0;
+      font-size: 4vw; }
+  #container #projectsBody {
+    display: flex; }
 
 /*# sourceMappingURL=style.css.map */
