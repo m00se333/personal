@@ -1,0 +1,29 @@
+  #content {
+        border: 1px solid black;
+        flex: 4;
+        overflow: scroll;
+
+        @media #{$iphone_portrait}{
+          flex: 10;
+        }
+
+        .postWrapper{
+          display: flex;
+          flex-direction: column;
+          
+          /* Story So Far Styles */
+          
+          #postHeader{
+            display: flex;
+            
+            @media #{$iphone_portrait}{
+              flex-direction: column;
+            }
+
+          }
+
+        }
+
+      }
+
+            

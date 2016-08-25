@@ -1,10 +1,14 @@
-/* Imports */
+/* Helpers */
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor; }
+
 #container {
   display: flex;
   height: 100vh;
   /* Navigation Styles */
   /* End Navigation Styles */
-  /* End Story so Far Styles */
   /* Projects Styles */
   /* End Projects Styles */ }
   @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -67,56 +71,56 @@
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
           #container #content .postWrapper #postHeader {
             flex-direction: column; } }
-        #container #content .postWrapper #postHeader #titleDate {
-          flex: 1.25;
-          margin: 10% 0 0 2%;
-          display: flex;
-          flex-direction: column; }
-          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-            #container #content .postWrapper #postHeader #titleDate {
-              display: flex;
-              flex-direction: column;
-              align-self: center;
-              margin: 0; } }
-          #container #content .postWrapper #postHeader #titleDate h2 {
-            font-size: 4vw;
-            align-self: center;
-            order: 1; }
-            @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-              #container #content .postWrapper #postHeader #titleDate h2 {
-                font-size: 7vw;
-                margin: 2% 0 2% 0; } }
-          #container #content .postWrapper #postHeader #titleDate span {
-            margin: 0 0 0 7%;
-            align-self: auto;
-            font-size: 2vw;
-            order: 2; }
-            @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-              #container #content .postWrapper #postHeader #titleDate span {
-                align-self: center;
-                margin: 0;
-                font-size: 5vw; } }
-        #container #content .postWrapper #postHeader #testFrame {
-          height: 22vw;
-          width: 200px;
-          border: 1px solid black;
-          flex: .75;
-          margin: 5% 2% 5% 0%;
-          order: 1; }
-          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-            #container #content .postWrapper #postHeader #testFrame {
-              align-self: center;
-              height: 30vw;
-              width: 50%; } }
-      #container #content .postWrapper #postBody {
+  #container #titleDate {
+    flex: 1.25;
+    margin: 10% 0 0 2%;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      #container #titleDate {
         display: flex;
-        flex-wrap: wrap;
-        font-size: 1.6vw;
-        overflow: scroll;
-        padding: 0 5%; }
-        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-          #container #content .postWrapper #postBody {
-            padding: 0 4%; } }
+        flex-direction: column;
+        align-self: center;
+        margin: 0; } }
+    #container #titleDate h2 {
+      font-size: 4vw;
+      align-self: center;
+      order: 1; }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        #container #titleDate h2 {
+          font-size: 7vw;
+          margin: 2% 0 2% 0; } }
+    #container #titleDate span {
+      margin: 0 0 0 7%;
+      align-self: auto;
+      font-size: 2vw;
+      order: 2; }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        #container #titleDate span {
+          align-self: center;
+          margin: 0;
+          font-size: 5vw; } }
+  #container #testFrame {
+    height: 22vw;
+    width: 200px;
+    border: 1px solid black;
+    flex: .75;
+    margin: 5% 2% 5% 0%;
+    order: 1; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      #container #testFrame {
+        align-self: center;
+        height: 30vw;
+        width: 50%; } }
+  #container #postBody {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.6vw;
+    overflow: scroll;
+    padding: 0 5%; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      #container #postBody {
+        padding: 0 4%; } }
   #container #projectsHeader {
     display: flex;
     align-self: center;
@@ -126,5 +130,18 @@
       font-size: 4vw; }
   #container #projectsBody {
     display: flex; }
+    #container #projectsBody .project {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin: 1% 1%;
+      padding: 0 4%; }
+      #container #projectsBody .project a {
+        text-decoration: none;
+        margin: 1%; }
+      #container #projectsBody .project a:visited {
+        color: black; }
+      #container #projectsBody .project a:hover {
+        text-decoration: underline; }
 
 /*# sourceMappingURL=style.css.map */
