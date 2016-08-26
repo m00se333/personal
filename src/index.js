@@ -11,12 +11,6 @@ const history = createHashHistory({ queryKey: false })
 // Layout Component //
 var MasterLayout = React.createClass({
   mixins: [History], 
-  
-  getInitialState: function(){
-    return{
-      hello: {}
-    }
-  },
 
   doSomething: function() {
     console.log('doSomething called by child with value:');
@@ -131,12 +125,12 @@ var MasterLayout = React.createClass({
           var Project = React.createClass({
 
               //formats arrays so they return as cleaner paragraphs
-              format: function(){
+              formatParagraph: function(){
                 var desc = this.props.data.desc;
                 var id = 1
                 
                 var paragraphs = desc.map(function(para){
-              
+
                     return(<p key={id++}>{ para }</p>)
 
                 });
@@ -153,7 +147,7 @@ var MasterLayout = React.createClass({
                       <h1>{this.props.id}</h1>
                       <a href={data.url} target="blank">{data.url}</a>
                       <a href={data.github} target="blank">{data.github}</a>
-                      {this.format()}
+                      {this.formatParagraph()}
                     </div>
                   )
               }
@@ -161,27 +155,50 @@ var MasterLayout = React.createClass({
   
       // The Story So Far //   
       var TestPage = React.createClass({
+        getInitialState: function(){
+            var landingText = require("./data/landingObject");
+            return{
+              postInfo: landingText
+            }  
+        },
+        formatPost: function(){
+          var postContent = this.state.postInfo.content;
+          var id = 1;
 
+          var paragraphs = postContent.map(function(para){
+                return (<p key={id ++}>{para}</p>)
+          })
+
+          return(<div>{paragraphs}</div>)
+
+        },
         render: function(){
+          var post = this.state.postInfo;
           return(
               <div className="postWrapper">
                 <div id="postHeader">
                   <div id="titleDate">
-                    <h2>This is a test blog title</h2>
-                    <span>1/1/2016</span>
+                    <h2>{post.title}</h2>
+                    <span>{post.date}</span>
                   </div>
-                  <div id="testFrame">
-                  </div>
+                  <img src={post.image} alt="Destiny Warlock" id="testFrame"/>
                 </div>
                 <div id="postBody">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae totam atque, sunt nesciunt nemo nobis nostrum cumque fugit esse soluta deleniti hic, quod dolorum. Nobis labore illum dolorem adipisci, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto possimus nostrum delectus ducimus officiis voluptatibus, tempora tempore, nobis magni neque laborum in hic omnis consectetur labore consequatur sint corrupti quo.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit assumenda quod ipsa, quisquam mollitia voluptatum molestias quos vitae velit doloribus numquam quaerat veniam facilis quas eaque dolore impedit saepe fugiat.</p>
+                    {this.formatPost()}
                 </div>
               </div>
             )
         }
+      })
+
+      // 404 Error //
+
+      var NotFound = React.createClass({
+        render: function(){
+          return(
+              <h1>There is nothing at this endpoint</h1>
+            )
+        }   
       })
 
 
@@ -192,16 +209,11 @@ var routes = (
               <Child path="/games-on-high-settings" component={GamesOnHighSettings}></Child>
               <Child path="/podcast" component={Podcast}></Child>
               <Child path="/projects" component={Projects}></Child>
+              <Child path="/*" component={NotFound}></Child>
             </Route>
           </Router>
   )
 
-var testRoutes = (
-      <MasterLayout>
-        <Child value="1"></Child>
-        <Child value="2"></Child>
-      </MasterLayout>
 
-  )
 
 ReactDOM.render(routes, document.getElementById("app"));

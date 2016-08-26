@@ -54,7 +54,8 @@
         #container #navigation ul li a:visited {
           color: black; }
         #container #navigation ul li a:hover {
-          text-decoration: underline; }
+          text-decoration: underline;
+          text-shadow: 0em 0em 0.2em white; }
   #container #content {
     border: 1px solid black;
     flex: 4;
@@ -139,7 +140,7 @@
       padding: 0 4%; }
       #container #projectsBody .project a {
         text-decoration: none;
-        margin: 1%; }
+        margin: 1% 0; }
       #container #projectsBody .project a:visited {
         color: black; }
       #container #projectsBody .project a:hover {
