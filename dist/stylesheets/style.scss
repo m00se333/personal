@@ -39,6 +39,7 @@
 
       #projectsBody{
         display: flex;
+        flex-wrap: wrap;
 
           .project{
             display: flex;
@@ -58,6 +59,7 @@
             a:hover{
               text-decoration: underline;
             }
+            
           }
       }
 

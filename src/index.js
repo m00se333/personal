@@ -129,15 +129,31 @@ var MasterLayout = React.createClass({
       })
 
           var Project = React.createClass({
+
+              //formats arrays so they return as cleaner paragraphs
+              format: function(){
+                var desc = this.props.data.desc;
+                var id = 1
+                
+                var paragraphs = desc.map(function(para){
+              
+                    return(<p key={id++}>{ para }</p>)
+
+                });
+
+                return(<div>{ paragraphs }</div>)
+
+
+              },
               render: function(){
-                var data = this.props.data
+                var data = this.props.data;
+
                 return(
                     <div className="project">
                       <h1>{this.props.id}</h1>
-                      
                       <a href={data.url} target="blank">{data.url}</a>
                       <a href={data.github} target="blank">{data.github}</a>
-                      <p>{data.desc}</p>
+                      {this.format()}
                     </div>
                   )
               }

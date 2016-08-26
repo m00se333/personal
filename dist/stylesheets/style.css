@@ -129,7 +129,8 @@
       margin: 0;
       font-size: 4vw; }
   #container #projectsBody {
-    display: flex; }
+    display: flex;
+    flex-wrap: wrap; }
     #container #projectsBody .project {
       display: flex;
       flex: 1;
