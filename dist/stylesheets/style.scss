@@ -1,9 +1,5 @@
 /* Helpers */
 @import "browserSizes";
-@import "octicons/index.scss";
-
-
-
 
 
 #container {
@@ -33,6 +29,8 @@
         h1 {
           margin: 0;
           font-size: 4vw;
+          font-family: 'Athiti', serif;
+          color: black;
 
         }
       }
@@ -59,7 +57,9 @@
             a:hover{
               text-decoration: underline;
             }
-            
+            p,a,h1{
+              font-family: 'Athiti', serif;
+            }
           }
       }
 

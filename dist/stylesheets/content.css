@@ -1,21 +1,20 @@
 /*
 Error: Undefined variable: "$iphone_portrait".
-        on line 6 of ./content.scss
+        on line 5 of ./content.scss
 
 1:   #content {
-2:         border: 1px solid black;
-3:         flex: 4;
-4:         overflow: scroll;
-5: 
-6:         @media #{$iphone_portrait}{
-7:           flex: 10;
-8:         }
-9: 
-10:         .postWrapper{
-11:           display: flex;
+2:         flex: 4;
+3:         overflow: scroll;
+4: 
+5:         @media #{$iphone_portrait}{
+6:           flex: 10;
+7:         }
+8: 
+9:         .postWrapper{
+10:           display: flex;
 
 Backtrace:
-./content.scss:6
+./content.scss:5
 /Users/MMac/.rvm/gems/ruby-2.2.2/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/MMac/.rvm/gems/ruby-2.2.2/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Users/MMac/.rvm/gems/ruby-2.2.2/gems/sass-3.4.22/lib/sass/script/tree/interpolation.rb:170:in `_perform'
@@ -73,4 +72,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$iphone_portrait\".\A         on line 6 of ./content.scss\A \A 1:   #content {\A 2:         border: 1px solid black;\A 3:         flex: 4;\A 4:         overflow: scroll;\A 5: \A 6:         @media #{$iphone_portrait}{\A 7:           flex: 10;\A 8:         }\A 9: \A 10:         .postWrapper{\A 11:           display: flex;"; }
+  content: "Error: Undefined variable: \"$iphone_portrait\".\A         on line 5 of ./content.scss\A \A 1:   #content {\A 2:         flex: 4;\A 3:         overflow: scroll;\A 4: \A 5:         @media #{$iphone_portrait}{\A 6:           flex: 10;\A 7:         }\A 8: \A 9:         .postWrapper{\A 10:           display: flex;"; }

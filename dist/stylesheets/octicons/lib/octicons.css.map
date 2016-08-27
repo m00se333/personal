@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,QAAS;EACP,OAAO,EAAE,YAAY;EACrB,cAAc,EAAE,QAAQ;EACxB,IAAI,EAAE,YAAY",
-"sources": ["octicons.scss"],
-"names": [],
-"file": "octicons.css"
-}

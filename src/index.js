@@ -44,7 +44,14 @@ var MasterLayout = React.createClass({
           )
       }
     });
+/*
 
+    Links to new features:
+
+    <li><Link to="/games-on-high-settings">Games on High Settings</Link></li>
+    <li><Link to="/podcast">Podcast</Link></li>
+
+*/
   
   var Navigation = React.createClass({
 
@@ -52,9 +59,7 @@ var MasterLayout = React.createClass({
       return(
           <div id="navigation">
             <ul>
-              <li><Link to="/">The Story So Far...</Link></li>
-              <li><Link to="/games-on-high-settings">Games on High Settings</Link></li>
-              <li><Link to="/podcast">Conversation on High Settings</Link></li>
+              <li><Link to="/">The Story So Far...</Link></li>              
               <li><Link to="/projects">Projects</Link></li>
             </ul>
           </div>
@@ -64,7 +69,8 @@ var MasterLayout = React.createClass({
 
   
   // Different Blog components for each route //
-  
+    
+    /*
       // Games on High Settings //
       var GamesOnHighSettings = React.createClass({
         render: function(){
@@ -78,7 +84,7 @@ var MasterLayout = React.createClass({
           return <h1>Podcast</h1>
         }
       });
-
+    */
 
       // Projects //
       var Projects = React.createClass({
@@ -201,13 +207,19 @@ var MasterLayout = React.createClass({
         }   
       })
 
+/* 
+
+    Paths to new features:
+
+    <Child path="/games-on-high-settings" component={GamesOnHighSettings}></Child>
+    <Child path="/podcast" component={Podcast}></Child>
+*/
+
 
 var routes = (
           <Router history={history}>
             <Route path="/" component={MasterLayout}>
               <IndexRoute component={TestPage}></IndexRoute>
-              <Child path="/games-on-high-settings" component={GamesOnHighSettings}></Child>
-              <Child path="/podcast" component={Podcast}></Child>
               <Child path="/projects" component={Projects}></Child>
               <Child path="/*" component={NotFound}></Child>
             </Route>
