@@ -49,7 +49,7 @@
 
               @media #{$iphone_portrait}{
                   align-self: center;
-                  height: 40vw;
+                  height: 60vw;
                   width: 55%;
                   flex: 1;
                   margin: 3% 0;
@@ -70,7 +70,11 @@
             p{
               font-family: 'Athiti', serif;
 
-              @media #{$iphone_portrait}{
+              @media only screen 
+                and (min-device-width: 375px) 
+                and (max-device-width: 667px) 
+                and (-webkit-min-device-pixel-ratio: 2)
+                and (orientation: portrait){
                 font-size: 2.5em;
               }
             }

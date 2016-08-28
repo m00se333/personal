@@ -117,7 +117,7 @@
     @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
       #container #testFrame {
         align-self: center;
-        height: 40vw;
+        height: 60vw;
         width: 55%;
         flex: 1;
         margin: 3% 0; } }
