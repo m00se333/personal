@@ -117,8 +117,8 @@
     @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
       #container #testFrame {
         align-self: center;
-        height: 30vw;
-        width: 50%;
+        height: 40vw;
+        width: 55%;
         flex: 1;
         margin: 3% 0; } }
   #container #postBody {
@@ -134,7 +134,7 @@
       font-family: 'Athiti', serif; }
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         #container #postBody p {
-          font-size: 1.7em; } }
+          font-size: 2.5em; } }
   #container #projectsHeader {
     display: flex;
     align-self: center;
