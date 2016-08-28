@@ -72,7 +72,8 @@
       flex-direction: column;
       /* Story So Far Styles */ }
       #container #content .postWrapper #postHeader {
-        display: flex; }
+        display: flex;
+        flex: 1; }
         @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
           #container #content .postWrapper #postHeader {
             flex-direction: column; } }
@@ -83,15 +84,15 @@
     flex-direction: column; }
     @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
       #container #titleDate {
-        display: flex;
-        flex-direction: column;
+        flex: 1;
         align-self: center;
         margin: 0; } }
     #container #titleDate h2 {
       font-size: 4vw;
       align-self: center;
       order: 1;
-      font-family: 'Athiti', serif; }
+      font-family: 'Athiti', serif;
+      flex: 1; }
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         #container #titleDate h2 {
           font-size: 7vw;
@@ -101,7 +102,8 @@
       align-self: auto;
       font-size: 2vw;
       order: 2;
-      font-family: 'Athiti', serif; }
+      font-family: 'Athiti', serif;
+      flex: 1; }
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         #container #titleDate span {
           align-self: center;
@@ -126,7 +128,8 @@
     flex-wrap: wrap;
     font-size: 1.6vw;
     overflow: scroll;
-    padding: 0 5%; }
+    padding: 0 5%;
+    flex: 1; }
     @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
       #container #postBody {
         padding: 0 4%; } }
@@ -134,7 +137,7 @@
       font-family: 'Athiti', serif; }
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         #container #postBody p {
-          font-size: 2.5em; } }
+          font-size: 3.5em; } }
   #container #projectsHeader {
     display: flex;
     align-self: center;

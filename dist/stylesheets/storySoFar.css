@@ -8,11 +8,11 @@ Error: Undefined variable: "$iphone_portrait".
 5:               flex-direction: column;
 6:               
 7:               @media #{$iphone_portrait}{
-8:                   display: flex;
-9:                   flex-direction: column;
-10:                   align-self: center;
-11:                   margin: 0;
-12:                 }
+8:                   flex: 1;
+9:                   align-self: center;
+10:                   margin: 0;
+11:                 }
+12:                 
 
 Backtrace:
 ./storySoFar.scss:7
@@ -73,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$iphone_portrait\".\A         on line 7 of ./storySoFar.scss\A \A 2:               flex: 1.25;\A 3:               margin: 10% 0 0 2%;\A 4:               display: flex;\A 5:               flex-direction: column;\A 6:               \A 7:               @media #{$iphone_portrait}{\A 8:                   display: flex;\A 9:                   flex-direction: column;\A 10:                   align-self: center;\A 11:                   margin: 0;\A 12:                 }"; }
+  content: "Error: Undefined variable: \"$iphone_portrait\".\A         on line 7 of ./storySoFar.scss\A \A 2:               flex: 1.25;\A 3:               margin: 10% 0 0 2%;\A 4:               display: flex;\A 5:               flex-direction: column;\A 6:               \A 7:               @media #{$iphone_portrait}{\A 8:                   flex: 1;\A 9:                   align-self: center;\A 10:                   margin: 0;\A 11:                 }\A 12:                 "; }

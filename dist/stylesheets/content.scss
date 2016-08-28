@@ -14,6 +14,7 @@
           
           #postHeader{
             display: flex;
+            flex: 1;
             
             @media #{$iphone_portrait}{
               flex-direction: column;
