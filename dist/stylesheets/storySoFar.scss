@@ -51,6 +51,8 @@
                   align-self: center;
                   height: 30vw;
                   width: 50%;
+                  flex: 1;
+                  margin: 3% 0;
                 }
               }
             
@@ -67,6 +69,10 @@
 
             p{
               font-family: 'Athiti', serif;
+
+              @media #{$iphone_portrait}{
+                font-size: 1.7em;
+              }
             }
           }
         
