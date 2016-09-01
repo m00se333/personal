@@ -5,11 +5,5 @@
     display: flex;
     flex-direction: column;
     /* Story So Far Styles */ }
-    #content .postWrapper #postHeader {
-      display: flex;
-      flex: 1; }
-      @media screen and (max-width: 1099px) {
-        #content .postWrapper #postHeader {
-          flex-direction: column; } }
 
 /*# sourceMappingURL=content.css.map */

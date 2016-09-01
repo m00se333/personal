@@ -41,6 +41,9 @@
           font-family: 'Athiti', serif;
           color: black;
           text-align: center; }
+          @media screen and (max-width: 1099px) {
+            #container #navigation ul li a {
+              font-size: 3.5vh; } }
         #container #navigation ul li a:visited {
           color: black; }
         #container #navigation ul li a:hover {
@@ -52,28 +55,23 @@
       display: flex;
       flex-direction: column;
       /* Story So Far Styles */ }
-      #container #content .postWrapper #postHeader {
-        display: flex;
-        flex: 1; }
-        @media screen and (max-width: 1099px) {
-          #container #content .postWrapper #postHeader {
-            flex-direction: column; } }
   #container #titleDate {
-    flex: 1.25;
-    margin: 10% 0 0 2%;
+    flex: 2;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    background-position-y: -100px;
+    background-repeat: no-repeat; }
     #container #titleDate h2 {
       font-size: 6vw;
       align-self: center;
       order: 1;
       font-family: 'Athiti', serif;
       flex: 1; }
-      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
         #container #titleDate h2 {
-          font-size: 8vw; } }
+          font-size: 5.2vh; } }
     #container #titleDate span {
-      margin: 0 auto;
+      margin: 0 auto 2%;
       align-self: auto;
       font-size: 4vw;
       order: 2;
@@ -82,13 +80,6 @@
       @media screen and (max-width: 700px) {
         #container #titleDate span {
           font-size: 8vw; } }
-  #container #testFrame {
-    height: 22vw;
-    width: 200px;
-    border: 1px solid black;
-    flex: .75;
-    margin: 5% 2% 5% 0%;
-    order: 1; }
   #container #postBody {
     display: flex;
     flex-wrap: wrap;

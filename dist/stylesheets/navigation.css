@@ -33,6 +33,9 @@
         font-family: 'Athiti', serif;
         color: black;
         text-align: center; }
+        @media screen and (max-width: 1099px) {
+          #navigation ul li a {
+            font-size: 3.5vh; } }
       #navigation ul li a:visited {
         color: black; }
       #navigation ul li a:hover {

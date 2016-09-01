@@ -242,15 +242,18 @@ var MasterLayout = React.createClass({
         },
         render: function(){
           var post = this.state.postInfo;
+
+          var style = {
+
+            backgroundImage: "url("+ post.image[0] +")"
+
+          }
           return(
               <div className="postWrapper">
-                <div id="postHeader">
-                  <div id="titleDate">
+                  <div id="titleDate" style={style}>
                     <h2>{post.title}</h2>
                     <span>{post.date}</span>
                   </div>
-                  <img src={post.image} alt="Destiny Warlock" id="testFrame"/>
-                </div>
                 <div id="postBody">
                     {this.formatPost()}
                 </div>

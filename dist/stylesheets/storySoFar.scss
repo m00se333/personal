@@ -1,9 +1,9 @@
 #titleDate{
-              flex: 1.25;
-              margin: 10% 0 0 2%;
+              flex: 2;
               display: flex;
               flex-direction: column;
-              
+              background-position-y: -100px;
+              background-repeat: no-repeat;
               
                 
                 h2{
@@ -13,8 +13,8 @@
                 font-family: 'Athiti', serif;
                 flex: 1;
 
-                @media #{$iphone6Plus_portrait}{
-                  font-size: 8vw;
+                @media #{$iphone6Plus_portrait, $iphone_portrait}{
+                  font-size: 5.2vh;
                   
                 }
 
@@ -22,7 +22,7 @@
                 }
 
                 span{
-                margin: 0 auto;
+                margin: 0 auto 2%;
                 align-self: auto;
                 font-size: 4vw;
                 order: 2;
@@ -35,17 +35,6 @@
 
                 
                 }
-              }
-            
-            #testFrame{
-              height: 22vw;
-              width: 200px;
-              border: 1px solid black;
-              flex: .75;
-              margin: 5% 2% 5% 0%;
-              order: 1;
-
-              
               }
             
           
