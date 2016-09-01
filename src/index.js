@@ -52,58 +52,83 @@ var MasterLayout = React.createClass({
 
 */
 
-  var NavEndpoints = React.createClass({
-    paths: {
-      home: {
-        url: "/",
-        title: "The Story So Far..."
-      },
-      projects: {
-        url: "/projects",
-        title: "Projects"
-      }
-    },
-
-    renderEndpoints: function(key){
-      console.log(paths.home.url)
-    },
-
-    render: function(){
-      return(
-        <h1>Filler</h1>
-        )
-    }
-  })
+  
   
   var Navigation = React.createClass({
     
-    renderEndpoints: function(key){
-      var routesObject = {
-          
-          home: {
-            url: "/",
-            title: "The Story So Far..."
-          },
-          projects: {
-            url: "/projects",
-            title: "Projects"
-          }
-        }
-      
+    getInitialState: function(){
+      var endpoints = require("./data/naviEnd.js");
+      return {
+        endpoints: endpoints
+      }
+                  
     },
+    componentDidMount: function() { 
+
+          },
+
+    renderEndpoints: function(key){
+      var endpointDetails = this.state.endpoints[key];
+      
+      return(
+        <NavEndpt key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
+        )
+    
+    },
+
     render: function(){
         
       return(
           <div id="navigation">
             <ul>
-              <li><Link onClick={this.renderEndpoints}to="/">The Story So Far...</Link></li>              
-              <li><Link onClick={this.renderEndpoints}to="/projects">Projects</Link></li>
+              {Object.keys(this.state.endpoints).map(this.renderEndpoints)}
             </ul>
           </div>
         )
     }
   });
 
+        var NavEndpt = React.createClass({
+
+          
+
+          render: function(){
+            return(
+              <li><Link to={this.props.url}>{this.props.title}</Link></li>
+            )
+          }
+        })
+            
+
+            // var NavEndpoints = React.createClass({
+                
+                
+
+            //     renderEndpoints: function(key){
+
+            //       return(<li><Link to={key.url}>{key.title}</Link></li>)
+                  
+            //     },
+
+            //     render: function(){
+            //       var paths = {
+            //               home: {
+            //                 url: "/",
+            //                 title: "The Story So Far..."
+            //               },
+            //               projects: {
+            //                 url: "/projects",
+            //                 title: "Projects"
+            //               }
+            //           } 
+
+            //     return (
+
+            //         {Object.keys(paths).map(this.renderEndpoints())}
+                    
+            //         )
+            //     }
+            //   });
   
   // Different Blog components for each route //
     

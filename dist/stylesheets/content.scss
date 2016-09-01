@@ -3,9 +3,7 @@
         flex: 4 4 900px;
         overflow: scroll;
 
-        @media #{$iphone_portrait}{
-          flex: 10;
-        }
+        
 
         .postWrapper{
           display: flex;
@@ -16,9 +14,9 @@
           #postHeader{
             display: flex;
             flex: 1;
-            
-            @media #{$iphone_portrait}{
-              flex-direction: column;
+
+            @media screen and (max-width: 1099px){
+              flex-direction: column;    
             }
 
           }

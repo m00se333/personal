@@ -7,11 +7,6 @@
   flex-wrap: wrap;
   height: 100vh;
   
-  @media #{$iphone_portrait} {
-      display: flex;
-      height: 100vh;
-      flex-direction: column;
-    }
     @import "navigation";
     
     @import "content";

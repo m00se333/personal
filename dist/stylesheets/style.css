@@ -7,20 +7,10 @@
   /* End Navigation Styles */
   /* Projects Styles */
   /* End Projects Styles */ }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-    #container {
-      display: flex;
-      height: 100vh;
-      flex-direction: column; } }
   #container #navigation {
     flex: 1 1 200px;
     display: flex;
     background: #9b59b6; }
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-      #container #navigation {
-        flex: 1;
-        background: #9b59b6;
-        display: flex; } }
     @media screen and (max-width: 1099px) {
       #container #navigation {
         flex-direction: row;
@@ -42,10 +32,6 @@
         flex: 1;
         display: flex;
         align-self: center; }
-        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-          #container #navigation ul li {
-            align-self: center;
-            text-align: center; } }
         #container #navigation ul li a {
           text-decoration: none;
           flex: 1;
@@ -55,23 +41,13 @@
           font-family: 'Athiti', serif;
           color: black;
           text-align: center; }
-          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-            #container #navigation ul li a {
-              font-size: 3vh; } }
         #container #navigation ul li a:visited {
           color: black; }
         #container #navigation ul li a:hover {
           text-shadow: 0em 0em 0.2em white; }
-          @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-            #container #navigation ul li a:hover {
-              text-shadow: none;
-              text-decoration: underline; } }
   #container #content {
     flex: 4 4 900px;
     overflow: scroll; }
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-      #container #content {
-        flex: 10; } }
     #container #content .postWrapper {
       display: flex;
       flex-direction: column;
@@ -79,7 +55,7 @@
       #container #content .postWrapper #postHeader {
         display: flex;
         flex: 1; }
-        @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        @media screen and (max-width: 1099px) {
           #container #content .postWrapper #postHeader {
             flex-direction: column; } }
   #container #titleDate {
@@ -87,33 +63,25 @@
     margin: 10% 0 0 2%;
     display: flex;
     flex-direction: column; }
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-      #container #titleDate {
-        flex: 1;
-        align-self: center;
-        margin: 0; } }
     #container #titleDate h2 {
-      font-size: 4vw;
+      font-size: 6vw;
       align-self: center;
       order: 1;
       font-family: 'Athiti', serif;
       flex: 1; }
-      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
         #container #titleDate h2 {
-          font-size: 7vw;
-          margin: 2% 0 2% 0; } }
+          font-size: 8vw; } }
     #container #titleDate span {
       margin: 0 auto;
       align-self: auto;
-      font-size: 2vw;
+      font-size: 4vw;
       order: 2;
       font-family: 'Athiti', serif;
       flex: 1; }
-      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+      @media screen and (max-width: 700px) {
         #container #titleDate span {
-          align-self: center;
-          margin: 0;
-          font-size: 5vw; } }
+          font-size: 8vw; } }
   #container #testFrame {
     height: 22vw;
     width: 200px;
@@ -121,13 +89,6 @@
     flex: .75;
     margin: 5% 2% 5% 0%;
     order: 1; }
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-      #container #testFrame {
-        align-self: center;
-        height: 60vw;
-        width: 55%;
-        flex: 1;
-        margin: 3% 0; } }
   #container #postBody {
     display: flex;
     flex-wrap: wrap;
@@ -135,9 +96,6 @@
     overflow: scroll;
     padding: 0 5%;
     flex: 1; }
-    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-      #container #postBody {
-        padding: 0 4%; } }
     #container #postBody p {
       font-family: 'Athiti', serif;
       font-size: 3.5vh; }

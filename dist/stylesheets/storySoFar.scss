@@ -4,39 +4,36 @@
               display: flex;
               flex-direction: column;
               
-              @media #{$iphone_portrait}{
-                  flex: 1;
-                  align-self: center;
-                  margin: 0;
-                }
+              
                 
                 h2{
-                font-size: 4vw;
+                font-size: 6vw;
                 align-self: center;
                 order: 1;
                 font-family: 'Athiti', serif;
                 flex: 1;
 
-                @media #{$iphone_portrait}{
-                  font-size: 7vw;
-                  margin: 2% 0 2% 0;
-                  }
+                @media #{$iphone6Plus_portrait}{
+                  font-size: 8vw;
+                  
+                }
+
+                
                 }
 
                 span{
                 margin: 0 auto;
                 align-self: auto;
-                font-size: 2vw;
+                font-size: 4vw;
                 order: 2;
                 font-family: 'Athiti', serif;
                 flex: 1;
+                @media screen and (max-width: 700px){
+                  font-size: 8vw;
+                  
+                }
 
-                @media #{$iphone_portrait}{
-                  align-self: center;
-                  margin: 0;
-                  font-size: 5vw;
-
-                  }
+                
                 }
               }
             
@@ -48,13 +45,7 @@
               margin: 5% 2% 5% 0%;
               order: 1;
 
-              @media #{$iphone_portrait}{
-                  align-self: center;
-                  height: 60vw;
-                  width: 55%;
-                  flex: 1;
-                  margin: 3% 0;
-                }
+              
               }
             
           
@@ -65,9 +56,7 @@
             overflow: scroll;
             padding: 0 5%;
             flex: 1;
-            @media #{$iphone_portrait}{
-              padding: 0 4%;
-            }
+            
 
             p{
               font-family: 'Athiti', serif;
