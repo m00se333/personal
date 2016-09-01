@@ -24,7 +24,7 @@
     @media screen and (max-width: 1099px) {
       #container #navigation {
         flex-direction: row;
-        height: 10vh; } }
+        height: 12vh; } }
     #container #navigation ul {
       display: flex;
       flex: 1;
@@ -36,7 +36,8 @@
       align-self: center; }
       @media screen and (max-width: 1099px) {
         #container #navigation ul {
-          flex-direction: row; } }
+          flex-direction: row;
+          height: 100%; } }
       #container #navigation ul li {
         flex: 1;
         display: flex;
@@ -52,7 +53,8 @@
           font-size: 4vh;
           margin: 0 auto;
           font-family: 'Athiti', serif;
-          color: black; }
+          color: black;
+          text-align: center; }
           @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
             #container #navigation ul li a {
               font-size: 3vh; } }

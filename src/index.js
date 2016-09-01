@@ -10,8 +10,10 @@ const history = createHashHistory({ queryKey: false })
 var MasterLayout = React.createClass({
   mixins: [History], 
 
-  doSomething: function() {
-    console.log('doSomething called by child with value:');
+  activePage: function(){
+    this.setState({
+      active: true
+    });
   },
 
   render: function(){
@@ -49,15 +51,53 @@ var MasterLayout = React.createClass({
     <li><Link to="/podcast">Podcast</Link></li>
 
 */
-  
-  var Navigation = React.createClass({
+
+  var NavEndpoints = React.createClass({
+    paths: {
+      home: {
+        url: "/",
+        title: "The Story So Far..."
+      },
+      projects: {
+        url: "/projects",
+        title: "Projects"
+      }
+    },
+
+    renderEndpoints: function(key){
+      console.log(paths.home.url)
+    },
 
     render: function(){
       return(
+        <h1>Filler</h1>
+        )
+    }
+  })
+  
+  var Navigation = React.createClass({
+    
+    renderEndpoints: function(key){
+      var routesObject = {
+          
+          home: {
+            url: "/",
+            title: "The Story So Far..."
+          },
+          projects: {
+            url: "/projects",
+            title: "Projects"
+          }
+        }
+      
+    },
+    render: function(){
+        
+      return(
           <div id="navigation">
             <ul>
-              <li><Link to="/">The Story So Far...</Link></li>              
-              <li><Link to="/projects">Projects</Link></li>
+              <li><Link onClick={this.renderEndpoints}to="/">The Story So Far...</Link></li>              
+              <li><Link onClick={this.renderEndpoints}to="/projects">Projects</Link></li>
             </ul>
           </div>
         )
