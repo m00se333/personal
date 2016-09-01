@@ -2,7 +2,7 @@
 Error: Undefined variable: "$iphone_portrait".
         on line 8 of ./navigation.scss
 
-3:         flex: 1;
+3:         flex: 1 1 200px;
 4:         display: flex;
 5:         background: #9b59b6;
 6:         
@@ -12,7 +12,7 @@ Error: Undefined variable: "$iphone_portrait".
 10:           background: #9b59b6;
 11:           display: flex;
 12:         }
-13:           ul{
+13: 
 
 Backtrace:
 ./navigation.scss:8
@@ -73,4 +73,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$iphone_portrait\".\A         on line 8 of ./navigation.scss\A \A 3:         flex: 1;\A 4:         display: flex;\A 5:         background: #9b59b6;\A 6:         \A 7: \A 8:         @media #{$iphone_portrait}{\A 9:           flex: 1;\A 10:           background: #9b59b6;\A 11:           display: flex;\A 12:         }\A 13:           ul{"; }
+  content: "Error: Undefined variable: \"$iphone_portrait\".\A         on line 8 of ./navigation.scss\A \A 3:         flex: 1 1 200px;\A 4:         display: flex;\A 5:         background: #9b59b6;\A 6:         \A 7: \A 8:         @media #{$iphone_portrait}{\A 9:           flex: 1;\A 10:           background: #9b59b6;\A 11:           display: flex;\A 12:         }\A 13: "; }

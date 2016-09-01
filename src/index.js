@@ -7,8 +7,6 @@ import createHashHistory from 'history/lib/createHashHistory'
 import { Router, Route, Link, IndexRoute } from "react-router";
 const history = createHashHistory({ queryKey: false })
 
-
-// Layout Component //
 var MasterLayout = React.createClass({
   mixins: [History], 
 
@@ -34,8 +32,7 @@ var MasterLayout = React.createClass({
       )
 
   }
-});
-  
+}); 
   // Top Level Containers //
   var Child = React.createClass({
       render: function(){
@@ -160,7 +157,7 @@ var MasterLayout = React.createClass({
           })
   
       // The Story So Far //   
-      var TestPage = React.createClass({
+      var CoverLetter = React.createClass({
         getInitialState: function(){
             var landingText = require("./data/landingObject");
             return{
@@ -219,7 +216,7 @@ var MasterLayout = React.createClass({
 var routes = (
           <Router history={history}>
             <Route path="/" component={MasterLayout}>
-              <IndexRoute component={TestPage}></IndexRoute>
+              <IndexRoute component={CoverLetter}></IndexRoute>
               <Child path="/projects" component={Projects}></Child>
               <Child path="/*" component={NotFound}></Child>
             </Route>

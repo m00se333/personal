@@ -1,5 +1,6 @@
+  @import "browserSizes";
   #content {
-        flex: 4;
+        flex: 4 4 900px;
         overflow: scroll;
 
         @media #{$iphone_portrait}{

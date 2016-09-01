@@ -1,6 +1,6 @@
 /* Navigation Styles */
       #navigation{
-        flex: 1;
+        flex: 1 1 200px;
         display: flex;
         background: #9b59b6;
         
@@ -9,6 +9,11 @@
           flex: 1;
           background: #9b59b6;
           display: flex;
+        }
+
+        @media screen and (max-width: 1099px){
+          flex-direction: row;
+          height: 10vh;
         }
           ul{
             display: flex;
@@ -20,13 +25,9 @@
             padding: 0;
             align-self: center;
 
-            @media #{$iphone_portrait}{
-              display: flex;
+            
+            @media screen and (max-width: 1099px){
               flex-direction: row;
-              height: 100%;
-              width: 100%;
-              list-style: none;
-              margin: 0 auto;
             }
 
               li{
@@ -43,10 +44,14 @@
                     text-decoration: none;
                     flex: 1;
                     align-self: center;
-                    font-size: 1.5em;
+                    font-size: 4vh;
                     margin: 0 auto; 
                     font-family: 'Athiti', serif;
                     color: black;
+
+                      @media #{$iphone_portrait}{
+                      font-size: 3vh;
+                      }
                   }
                   a:visited{
                     color: black;
