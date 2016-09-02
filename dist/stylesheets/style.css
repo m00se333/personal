@@ -95,7 +95,7 @@
     margin: 5% 0; }
     #container #projectsHeader h1 {
       margin: 0;
-      font-size: 5.5vw;
+      font-size: 5em;
       font-family: 'Athiti', serif;
       color: black; }
   #container #projectsBody {
@@ -111,12 +111,12 @@
       margin: 1% 1%;
       padding: 0 4%; }
       #container #projectsBody .project h1 {
-        font-size: 5em; }
+        font-size: 4em; }
       #container #projectsBody .project a {
         text-decoration: none;
         margin: 1% 0;
         color: black;
-        font-size: 4em; }
+        font-size: 3.5em; }
       #container #projectsBody .project p {
         font-size: 3.5em; }
       #container #projectsBody .project a:visited {
