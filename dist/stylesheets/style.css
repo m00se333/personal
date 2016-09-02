@@ -111,14 +111,14 @@
       margin: 1% 1%;
       padding: 0 4%; }
       #container #projectsBody .project h1 {
-        font-size: 4vw; }
+        font-size: 4em; }
       #container #projectsBody .project a {
         text-decoration: none;
         margin: 1% 0;
         color: black;
-        font-size: 2vw; }
+        font-size: 2em; }
       #container #projectsBody .project p {
-        font-size: 2vw; }
+        font-size: 2em; }
       #container #projectsBody .project a:visited {
         color: black; }
       #container #projectsBody .project a:hover {
