@@ -65,7 +65,7 @@ var MasterLayout = React.createClass({
     },
     componentDidMount: function() { 
 
-          },
+    },
 
     renderEndpoints: function(key){
       var endpointDetails = this.state.endpoints[key];
@@ -93,7 +93,7 @@ var MasterLayout = React.createClass({
           render: function(){
             return(
               <div id={this.props.id}>
-                <Link to={this.props.url}>{this.props.title}</Link>
+                  <Link to={this.props.url}>{this.props.title}</Link>
               </div>
             )
           }

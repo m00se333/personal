@@ -34,6 +34,8 @@
     color: black; }
   #navigation a:hover {
     text-shadow: 0em 0em 0.2em white; }
+  #navigation a:active {
+    text-shadow: 0em 0em 0.2em white; }
 
 /* End Navigation Styles */
 

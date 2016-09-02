@@ -42,6 +42,8 @@
       color: black; }
     #container #navigation a:hover {
       text-shadow: 0em 0em 0.2em white; }
+    #container #navigation a:active {
+      text-shadow: 0em 0em 0.2em white; }
   #container #content {
     flex: 4 4 900px;
     overflow: scroll;
@@ -67,7 +69,7 @@
           font-size: 5.2vh; } }
     #container #titleDate span {
       margin: 0 auto 2%;
-      align-self: auto;
+      align-self: center;
       font-size: 4vw;
       order: 2;
       font-family: 'Athiti', serif;
@@ -114,14 +116,14 @@
         #container #projectsBody .project {
           padding: 0 2%; } }
       #container #projectsBody .project h1 {
-        font-size: 4em; }
+        font-size: 4vh; }
       #container #projectsBody .project a {
         text-decoration: none;
         margin: 1% 0;
         color: black;
-        font-size: 3.5em; }
+        font-size: 3.5vh; }
       #container #projectsBody .project p {
-        font-size: 3.5em; }
+        font-size: 3.5vh; }
       #container #projectsBody .project a:visited {
         color: black; }
       #container #projectsBody .project a:hover {
