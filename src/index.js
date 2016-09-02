@@ -213,8 +213,8 @@ var MasterLayout = React.createClass({
                 return(
                     <div className="project">
                       <h1>{this.props.id}</h1>
-                      <a href={data.url} target="blank">{data.url}</a>
-                      <a href={data.github} target="blank">{data.github}</a>
+                      <a href={"https://" + data.url} target="blank">{data.url}</a>
+                      <a href={"https://" + data.github} target="blank">{data.github}</a>
                       {this.formatParagraph()}
                     </div>
                   )
