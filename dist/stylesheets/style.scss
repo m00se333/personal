@@ -24,7 +24,7 @@
         
         h1 {
           margin: 0;
-          font-size: 4vw;
+          font-size: 5.5vw;
           font-family: 'Athiti', serif;
           color: black;
 
@@ -35,6 +35,10 @@
         display: flex;
         flex-wrap: wrap;
 
+          @media (orientation: portrait){
+            flex-direction: column;
+          }
+
           .project{
             display: flex;
             flex: 1;
@@ -42,10 +46,19 @@
             margin: 1% 1%;
             padding: 0 4%;
 
+            h1{
+              font-size: 4vw;
+            }
+
             a {
               text-decoration: none;
               margin: 1% 0;
               color: black;
+              font-size: 2vw;
+            }
+
+            p{
+              font-size: 2vw;
             }
 
             a:visited{

@@ -10,47 +10,42 @@
   #container #navigation {
     flex: 1 1 200px;
     display: flex;
-    background: #9b59b6; }
+    background: #9b59b6;
+    flex-direction: column; }
     @media screen and (max-width: 1099px) {
       #container #navigation {
         flex-direction: row;
         height: 12vh; } }
-    #container #navigation ul {
+    #container #navigation div {
       display: flex;
       flex: 1;
-      flex-direction: column;
-      height: 50vh;
-      list-style: none;
-      margin: 0;
+      height: 30vh;
       padding: 0;
       align-self: center; }
       @media screen and (max-width: 1099px) {
-        #container #navigation ul {
+        #container #navigation div {
           flex-direction: row;
           height: 100%; } }
-      #container #navigation ul li {
-        flex: 1;
-        display: flex;
-        align-self: center; }
-        #container #navigation ul li a {
-          text-decoration: none;
-          flex: 1;
-          align-self: center;
-          font-size: 4vh;
-          margin: 0 auto;
-          font-family: 'Athiti', serif;
-          color: black;
-          text-align: center; }
-          @media screen and (max-width: 1099px) {
-            #container #navigation ul li a {
-              font-size: 3.5vh; } }
-        #container #navigation ul li a:visited {
-          color: black; }
-        #container #navigation ul li a:hover {
-          text-shadow: 0em 0em 0.2em white; }
+    #container #navigation a {
+      text-decoration: none;
+      flex: 1;
+      align-self: center;
+      font-size: 4vh;
+      margin: 0 auto;
+      font-family: 'Athiti', serif;
+      color: black;
+      text-align: center; }
+      @media screen and (max-width: 1099px) {
+        #container #navigation a {
+          font-size: 3.5vh; } }
+    #container #navigation a:visited {
+      color: black; }
+    #container #navigation a:hover {
+      text-shadow: 0em 0em 0.2em white; }
   #container #content {
     flex: 4 4 900px;
-    overflow: scroll; }
+    overflow: scroll;
+    height: 100%; }
     #container #content .postWrapper {
       display: flex;
       flex-direction: column;
@@ -86,7 +81,8 @@
     font-size: 1.6vw;
     overflow: scroll;
     padding: 0 5%;
-    flex: 1; }
+    flex: 1;
+    margin-top: 5%; }
     #container #postBody p {
       font-family: 'Athiti', serif;
       font-size: 3.5vh; }
@@ -99,22 +95,30 @@
     margin: 5% 0; }
     #container #projectsHeader h1 {
       margin: 0;
-      font-size: 4vw;
+      font-size: 5.5vw;
       font-family: 'Athiti', serif;
       color: black; }
   #container #projectsBody {
     display: flex;
     flex-wrap: wrap; }
+    @media (orientation: portrait) {
+      #container #projectsBody {
+        flex-direction: column; } }
     #container #projectsBody .project {
       display: flex;
       flex: 1;
       flex-direction: column;
       margin: 1% 1%;
       padding: 0 4%; }
+      #container #projectsBody .project h1 {
+        font-size: 4vw; }
       #container #projectsBody .project a {
         text-decoration: none;
         margin: 1% 0;
-        color: black; }
+        color: black;
+        font-size: 2vw; }
+      #container #projectsBody .project p {
+        font-size: 2vw; }
       #container #projectsBody .project a:visited {
         color: black; }
       #container #projectsBody .project a:hover {

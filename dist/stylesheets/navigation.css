@@ -2,44 +2,38 @@
 #navigation {
   flex: 1 1 200px;
   display: flex;
-  background: #9b59b6; }
+  background: #9b59b6;
+  flex-direction: column; }
   @media screen and (max-width: 1099px) {
     #navigation {
       flex-direction: row;
       height: 12vh; } }
-  #navigation ul {
+  #navigation div {
     display: flex;
     flex: 1;
-    flex-direction: column;
-    height: 50vh;
-    list-style: none;
-    margin: 0;
+    height: 30vh;
     padding: 0;
     align-self: center; }
     @media screen and (max-width: 1099px) {
-      #navigation ul {
+      #navigation div {
         flex-direction: row;
         height: 100%; } }
-    #navigation ul li {
-      flex: 1;
-      display: flex;
-      align-self: center; }
-      #navigation ul li a {
-        text-decoration: none;
-        flex: 1;
-        align-self: center;
-        font-size: 4vh;
-        margin: 0 auto;
-        font-family: 'Athiti', serif;
-        color: black;
-        text-align: center; }
-        @media screen and (max-width: 1099px) {
-          #navigation ul li a {
-            font-size: 3.5vh; } }
-      #navigation ul li a:visited {
-        color: black; }
-      #navigation ul li a:hover {
-        text-shadow: 0em 0em 0.2em white; }
+  #navigation a {
+    text-decoration: none;
+    flex: 1;
+    align-self: center;
+    font-size: 4vh;
+    margin: 0 auto;
+    font-family: 'Athiti', serif;
+    color: black;
+    text-align: center; }
+    @media screen and (max-width: 1099px) {
+      #navigation a {
+        font-size: 3.5vh; } }
+  #navigation a:visited {
+    color: black; }
+  #navigation a:hover {
+    text-shadow: 0em 0em 0.2em white; }
 
 /* End Navigation Styles */
 

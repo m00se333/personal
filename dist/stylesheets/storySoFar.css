@@ -7,12 +7,12 @@ Error: Undefined variable: "$iphone6Plus_portrait".
 13:                 font-family: 'Athiti', serif;
 14:                 flex: 1;
 15: 
-16:                 @media #{$iphone6Plus_portrait, $iphone_portrait}{
-17:                   font-size: 5.2vh;
-18:                   
-19:                 }
-20: 
-21:                 
+16:                     @media #{$iphone6Plus_portrait, $iphone_portrait}{
+17:                       font-size: 5.2vh;
+18:                     }
+19: 
+20:                 
+21:                 }
 
 Backtrace:
 ./storySoFar.scss:16
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$iphone6Plus_portrait\".\A         on line 16 of ./storySoFar.scss\A \A 11:                 align-self: center;\A 12:                 order: 1;\A 13:                 font-family: 'Athiti', serif;\A 14:                 flex: 1;\A 15: \A 16:                 @media #{$iphone6Plus_portrait, $iphone_portrait}{\A 17:                   font-size: 5.2vh;\A 18:                   \A 19:                 }\A 20: \A 21:                 "; }
+  content: "Error: Undefined variable: \"$iphone6Plus_portrait\".\A         on line 16 of ./storySoFar.scss\A \A 11:                 align-self: center;\A 12:                 order: 1;\A 13:                 font-family: 'Athiti', serif;\A 14:                 flex: 1;\A 15: \A 16:                     @media #{$iphone6Plus_portrait, $iphone_portrait}{\A 17:                       font-size: 5.2vh;\A 18:                     }\A 19: \A 20:                 \A 21:                 }"; }

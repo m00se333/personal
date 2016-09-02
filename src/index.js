@@ -71,7 +71,7 @@ var MasterLayout = React.createClass({
       var endpointDetails = this.state.endpoints[key];
       
       return(
-        <NavEndpt key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
+        <NavEndpt id={endpointDetails.id} key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
         )
     
     },
@@ -80,9 +80,7 @@ var MasterLayout = React.createClass({
         
       return(
           <div id="navigation">
-            <ul>
               {Object.keys(this.state.endpoints).map(this.renderEndpoints)}
-            </ul>
           </div>
         )
     }
@@ -94,7 +92,9 @@ var MasterLayout = React.createClass({
 
           render: function(){
             return(
-              <li><Link to={this.props.url}>{this.props.title}</Link></li>
+              <div id={this.props.id}>
+                <Link to={this.props.url}>{this.props.title}</Link>
+              </div>
             )
           }
         })
