@@ -10,12 +10,6 @@ const history = createHashHistory({ queryKey: false })
 var MasterLayout = React.createClass({
   mixins: [History], 
 
-  activePage: function(){
-    this.setState({
-      active: true
-    });
-  },
-
   render: function(){
       var childrenWithProps = React.Children.map(this.props.children,
             (child) => React.cloneElement(child, {
@@ -59,19 +53,18 @@ var MasterLayout = React.createClass({
     getInitialState: function(){
       var endpoints = require("./data/naviEnd.js");
       return {
-        endpoints: endpoints
+        endpoints: endpoints,
+        active: true
       }
                   
     },
-    componentDidMount: function() { 
-
-    },
-
+  
     renderEndpoints: function(key){
       var endpointDetails = this.state.endpoints[key];
+      var active = this.state.active;
       
       return(
-        <NavEndpt id={endpointDetails.id} key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
+        <NavEndpt active={active}id={endpointDetails.id} key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
         )
     
     },
@@ -88,12 +81,31 @@ var MasterLayout = React.createClass({
 
         var NavEndpt = React.createClass({
 
-          
+          handleClick: function(){
+            this.setActivePage();
+            
+          },
+
+          setActivePage: function(){
+            
+            var selectedLink = document.getElementById(this.props.id + "-link")
+            var activeLink = selectedLink.getAttribute("class")
+            var activeLink = document.getElementsByClassName("active");
+            selectedLink.setAttribute("class", "active");
+
+
+          },
+
+          activeStyles: function(){
+            var activeLink = document.getElementsByClassName("active");
+            
+          },
 
           render: function(){
+
             return(
               <div id={this.props.id}>
-                  <Link to={this.props.url}>{this.props.title}</Link>
+                  <Link className={this.props.active} id={this.props.id + "-link"} to={this.props.url}>{this.props.title}</Link>
               </div>
             )
           }

@@ -2,11 +2,13 @@ module.exports = {
               home: {
                 url: "/",
                 title: "The Story So Far...",
-                id: "cover"
+                id: "cover",
+                active: true
               },
               projects: {
                 url: "/projects",
                 title: "Projects",
-                id: "projects"
+                id: "projects",
+                active: false
               }
           } 
