@@ -2,13 +2,13 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var ReactRouter = require('react-router');
 var Navigation = ReactRouter.Navigation; //mixin
-var History = ReactRouter.History
-import createHashHistory from 'history/lib/createHashHistory'
+var History = ReactRouter.History;
+import createHashHistory from 'history/lib/createHashHistory';
 import { Router, Route, Link, IndexRoute } from "react-router";
-const history = createHashHistory({ queryKey: false })
+const history = createHashHistory({ queryKey: false });
 
 var MasterLayout = React.createClass({
-  mixins: [History], 
+  mixins: [History],
 
   render: function(){
       var childrenWithProps = React.Children.map(this.props.children,
@@ -20,7 +20,7 @@ var MasterLayout = React.createClass({
     return(
 
         <div id="container">
-          <Navigation />
+          <Navigation activeRoute={this.props.location.pathname} />
           <div id="content">
             {childrenWithProps}
           </div>
@@ -33,7 +33,7 @@ var MasterLayout = React.createClass({
   var Child = React.createClass({
       render: function(){
         return(
-            <div onClick={() => this.props.doSomething(this.props.value)}>Click Me</div>
+            <div></div>
           )
       }
     });
@@ -47,101 +47,85 @@ var MasterLayout = React.createClass({
 */
 
   
-  
+  // This is the parent component 
   var Navigation = React.createClass({
-    
     getInitialState: function(){
       var endpoints = require("./data/naviEnd.js");
       return {
         endpoints: endpoints,
-        active: true
-      }
-                  
+        activeRoute: this.props.activeRoute
+      }           
     },
-  
+
+    componentDidMount: function(){
+        var cover = document.getElementById("cover");
+
+        cover.className += " active";
+    },
+
+    componentDidUpdate: function(){
+
+      var active = this.props.activeRoute
+
+      var cover = document.getElementById("cover");
+      var projects = document.getElementById("projects");
+
+      
+        function resetClasses(){
+          cover.className = "navLink";
+          projects.className = "navLink";
+        }
+
+        function setActive(){
+
+            if (active === "/"){
+
+            cover.className += " active";
+          } else if (active === "/projects"){
+
+            projects.className += " active"
+          }
+        }
+
+
+      resetClasses();
+      setActive();
+
+    },
+
     renderEndpoints: function(key){
       var endpointDetails = this.state.endpoints[key];
-      var active = this.state.active;
-      
+  
       return(
-        <NavEndpt active={active}id={endpointDetails.id} key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
+        <NavEndpt id={endpointDetails.id} key={endpointDetails.title} url={endpointDetails.url} title={endpointDetails.title}/>
         )
     
     },
 
     render: function(){
-        
       return(
           <div id="navigation">
               {Object.keys(this.state.endpoints).map(this.renderEndpoints)}
           </div>
         )
-    }
-  });
+      }
+    });
+
 
         var NavEndpt = React.createClass({
 
-          handleClick: function(){
-            this.setActivePage();
-            
-          },
-
-          setActivePage: function(){
-            
-            var selectedLink = document.getElementById(this.props.id + "-link")
-            var activeLink = selectedLink.getAttribute("class")
-            var activeLink = document.getElementsByClassName("active");
-            selectedLink.setAttribute("class", "active");
-
-
-          },
-
-          activeStyles: function(){
-            var activeLink = document.getElementsByClassName("active");
-            
-          },
-
           render: function(){
-
-            return(
-              <div id={this.props.id}>
-                  <Link className={this.props.active} id={this.props.id + "-link"} to={this.props.url}>{this.props.title}</Link>
+          
+            return (
+              <div className="navLink" id={this.props.id}>
+                <Link id={this.props.id + "-link"} to={this.props.url}>{this.props.title}</Link>
               </div>
-            )
+              )
+        
           }
         })
             
 
-            // var NavEndpoints = React.createClass({
-                
-                
-
-            //     renderEndpoints: function(key){
-
-            //       return(<li><Link to={key.url}>{key.title}</Link></li>)
-                  
-            //     },
-
-            //     render: function(){
-            //       var paths = {
-            //               home: {
-            //                 url: "/",
-            //                 title: "The Story So Far..."
-            //               },
-            //               projects: {
-            //                 url: "/projects",
-            //                 title: "Projects"
-            //               }
-            //           } 
-
-            //     return (
-
-            //         {Object.keys(paths).map(this.renderEndpoints())}
-                    
-            //         )
-            //     }
-            //   });
-  
   // Different Blog components for each route //
     
     /*
@@ -203,6 +187,7 @@ var MasterLayout = React.createClass({
       })
 
           var Project = React.createClass({
+
 
               //formats arrays so they return as cleaner paragraphs
               formatParagraph: function(){

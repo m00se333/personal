@@ -1,5 +1,5 @@
 module.exports = {
-              home: {
+              cover: {
                 url: "/",
                 title: "The Story So Far...",
                 id: "cover",

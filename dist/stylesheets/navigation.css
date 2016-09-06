@@ -13,7 +13,8 @@
     flex: 1;
     height: 30vh;
     padding: 0;
-    align-self: center; }
+    align-self: center;
+    width: 100%; }
     @media screen and (max-width: 1099px) {
       #navigation div {
         flex-direction: row;
