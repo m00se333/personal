@@ -27,6 +27,8 @@
         #container #navigation div {
           flex-direction: row;
           height: 100%; } }
+    #container #navigation .active {
+      background: yellow; }
     #container #navigation a {
       text-decoration: none;
       flex: 1;

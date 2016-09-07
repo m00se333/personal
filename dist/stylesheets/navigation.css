@@ -19,6 +19,8 @@
       #navigation div {
         flex-direction: row;
         height: 100%; } }
+  #navigation .active {
+    background: yellow; }
   #navigation a {
     text-decoration: none;
     flex: 1;

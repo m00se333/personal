@@ -59,25 +59,28 @@ var MasterLayout = React.createClass({
 
     componentDidMount: function(){
         var cover = document.getElementById("cover");
+        var projects = document.getElementById("projects");
+        var active = this.props.activeRoute
 
-        cover.className += " active";
+        this.setActive();
     },
 
-    componentDidUpdate: function(){
+    resetClasses: function(){
+      var active = this.props.activeRoute
 
+      var cover = document.getElementById("cover");
+      var projects = document.getElementById("projects");    
+
+          cover.className = "navLink";
+          projects.className = "navLink";
+    },
+
+    setActive: function(){
       var active = this.props.activeRoute
 
       var cover = document.getElementById("cover");
       var projects = document.getElementById("projects");
-
-      
-        function resetClasses(){
-          cover.className = "navLink";
-          projects.className = "navLink";
-        }
-
-        function setActive(){
-
+            
             if (active === "/"){
 
             cover.className += " active";
@@ -85,11 +88,12 @@ var MasterLayout = React.createClass({
 
             projects.className += " active"
           }
-        }
+    },
 
+    componentDidUpdate: function(){
 
-      resetClasses();
-      setActive();
+      this.resetClasses();
+      this.setActive();
 
     },
 
