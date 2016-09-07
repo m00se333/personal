@@ -46,68 +46,52 @@ var MasterLayout = React.createClass({
       }           
     },
 
-    componentDidMount: function(){
-        var cover = document.getElementById("cover");
-        var projects = document.getElementById("projects");
-        var about = document.getElementById("about");
+    // componentDidMount: function(){
+    //     var cover = document.getElementById("cover");
+    //     var projects = document.getElementById("projects");
+    //     var about = document.getElementById("about");
 
-        var active = this.props.activeRoute
+    //     var active = this.props.activeRoute
 
-        this.setActive();
-    },
+    //     this.setActive();
+    // },
 
-    resetClasses: function(){
-      var active = this.props.activeRoute
+    // resetClasses: function(){
+    //   var active = this.props.activeRoute
 
-      var cover = document.getElementById("cover");
-      var projects = document.getElementById("projects");
-      var about = document.getElementById("about");    
+    //   var cover = document.getElementById("cover");
+    //   var projects = document.getElementById("projects");
+    //   var about = document.getElementById("about");    
 
-          cover.className = "navLink";
-          projects.className = "navLink";
-          about.className = "navLink";
-    },
+    //       cover.className = "navLink";
+    //       projects.className = "navLink";
+    //       about.className = "navLink";
+    // },
 
-    setActive: function(){
-      var active = this.props.activeRoute
+    // setActive: function(){
+    //   var active = this.props.activeRoute
 
-      var cover = document.getElementById("cover");
-      var projects = document.getElementById("projects");
-      var about = document.getElementById("about");
+    //   var cover = document.getElementById("cover");
+    //   var projects = document.getElementById("projects");
+    //   var about = document.getElementById("about");
 
-            if (active === "/"){
+    //         if (active === "/"){
 
-            cover.className += " active";
-          } else if (active === "/projects"){
+    //         cover.className += " active";
+    //       } else if (active === "/projects"){
 
-            projects.className += " active"
-          } else if (active === "about"){
-            about.className += " active"
-          }
-    },
+    //         projects.className += " active"
+    //       } else if (active === "/about"){
+    //         about.className += " active"
+    //       }
+    // },
 
-    altActive: function(){
-      var cover = document.getElementById("cover");
-      var projects = document.getElementById("projects");
-      var about = document.getElementById("about");
+    // componentDidUpdate: function(){
 
-      var allEndpoints = document.getElementsByClassName("navLink");
+    //   this.resetClasses();
+    //   this.setActive();
 
-      function yellowBox(){
-
-        console.log("hello")
-      }
-
-      allEndpoints.onClick = yellowBox(allEndpoints)
-
-    },
-
-    componentDidUpdate: function(){
-
-      this.resetClasses();
-      this.setActive();
-
-    },
+    // },
 
     renderEndpoints: function(key){
       var endpointDetails = this.state.endpoints[key];
@@ -119,9 +103,10 @@ var MasterLayout = React.createClass({
     },
 
     render: function(){
+
+
       return(
           <div id="navigation">
-              <About  />
               {Object.keys(this.state.endpoints).map(this.renderEndpoints)}
           </div>
         )
@@ -130,15 +115,41 @@ var MasterLayout = React.createClass({
 
         // Child of Navigation component
         var NavEndpt = React.createClass({
+          //switches state from true/false on one component
+          handleClick: function(){
+
+            var clickedElement = document.getElementById(this.props.id)
+
+            console.log(clickedElement.id)
+          },
+
+          yellowCheck: function(){
+            if (this.state.active === false){
+              document.getElementById(this.props.id).className = "navLink";
+            } else if (this.state.active === true){
+              this.makeBoxYellow();
+            }
+          },
+
+          makeBoxYellow: function(){
+            document.getElementById(this.props.id).className += " active"
+          },
+
+          componentDidMount: function(){
+
+            if (this.props.id === "cover"){
+              this.makeBoxYellow()
+            }
+            
+          },
 
           render: function(){
           
             return (
-              <div className="navLink" id={this.props.id}>
+              <div onClick={this.handleClick} className="navLink" id={this.props.id}>
                 <Link id={this.props.id + "-link"} to={this.props.url}>{this.props.title}</Link>
               </div>
               )
-        
           }
         })
 
@@ -268,9 +279,13 @@ var MasterLayout = React.createClass({
       })
 // Animated "about me" pop out in browser and regular page in mobile
 var About = React.createClass({
+      z: function(){
+            console.log(this)
+          },
+
       render: function(){
         return (
-          <div className="navLink" id="about">
+          <div onClick={this.z} className="navLink" id="about">
             <Link id="about-link" to="/">About</Link>
           </div>
           )

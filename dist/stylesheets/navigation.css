@@ -21,17 +21,20 @@
         height: 100%; } }
   #navigation .active {
     background: yellow; }
-  #navigation a, #navigation span {
+  #navigation a {
     text-decoration: none;
     flex: 1;
-    align-self: center;
     font-size: 4vh;
     margin: 0 auto;
     font-family: 'Athiti', serif;
     color: black;
-    text-align: center; }
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     @media screen and (max-width: 1099px) {
-      #navigation a, #navigation span {
+      #navigation a {
         font-size: 3.5vh; } }
   #navigation a:visited {
     color: black; }

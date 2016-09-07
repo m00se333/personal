@@ -1,10 +1,10 @@
 module.exports = {
-              // about:{
-              //   url: "/",
-              //   title: "About",
-              //   id: "about",
-              //   active: false
-              // },
+              about:{
+                url: "",
+                title: "About",
+                id: "about",
+                active: false
+              },
               cover: {
                 url: "/",
                 title: "The Story So Far...",
