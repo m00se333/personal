@@ -20,11 +20,11 @@
       #projectsHeader{
           display: flex;
           align-self: center;
-          margin: 5% 0;
+          margin: 5% 0% 10%;
         
         h1 {
           margin: 0;
-          font-size: 5vh;
+          font-size: 6vh;
           font-family: 'Athiti', serif;
           color: black;
 
@@ -43,11 +43,13 @@
             display: flex;
             flex: 1;
             flex-direction: column;
-            margin: 4% 1%;
+            margin: 1%;
             padding: 0 4%;
+            background: #ececec;  
 
             @media (orientation: portrait){
             padding: 0 2%;
+            margin: 3% 1%;
             }
 
             h1{

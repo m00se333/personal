@@ -6,6 +6,10 @@ var History = ReactRouter.History;
 import createHashHistory from 'history/lib/createHashHistory';
 import { Router, Route, Link, IndexRoute } from "react-router";
 const history = createHashHistory({ queryKey: false });
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
+
+
 
 var MasterLayout = React.createClass({
   mixins: [History],
@@ -29,25 +33,10 @@ var MasterLayout = React.createClass({
 
   }
 }); 
-  // Top Level Containers //
-  var Child = React.createClass({
-      render: function(){
-        return(
-            <div></div>
-          )
-      }
-    });
-/*
-
-    Links to new features:
-
-    <li><Link to="/games-on-high-settings">Games on High Settings</Link></li>
-    <li><Link to="/podcast">Podcast</Link></li>
-
-*/
 
   
-  // This is the parent component 
+  // This is the parent component that sits on the side or the top depending on the
+  // broswer size, contains components NavEndpt
   var Navigation = React.createClass({
     getInitialState: function(){
       var endpoints = require("./data/naviEnd.js");
@@ -60,6 +49,8 @@ var MasterLayout = React.createClass({
     componentDidMount: function(){
         var cover = document.getElementById("cover");
         var projects = document.getElementById("projects");
+        var about = document.getElementById("about");
+
         var active = this.props.activeRoute
 
         this.setActive();
@@ -69,10 +60,12 @@ var MasterLayout = React.createClass({
       var active = this.props.activeRoute
 
       var cover = document.getElementById("cover");
-      var projects = document.getElementById("projects");    
+      var projects = document.getElementById("projects");
+      var about = document.getElementById("about");    
 
           cover.className = "navLink";
           projects.className = "navLink";
+          about.className = "navLink";
     },
 
     setActive: function(){
@@ -80,14 +73,33 @@ var MasterLayout = React.createClass({
 
       var cover = document.getElementById("cover");
       var projects = document.getElementById("projects");
-            
+      var about = document.getElementById("about");
+
             if (active === "/"){
 
             cover.className += " active";
           } else if (active === "/projects"){
 
             projects.className += " active"
+          } else if (active === "about"){
+            about.className += " active"
           }
+    },
+
+    altActive: function(){
+      var cover = document.getElementById("cover");
+      var projects = document.getElementById("projects");
+      var about = document.getElementById("about");
+
+      var allEndpoints = document.getElementsByClassName("navLink");
+
+      function yellowBox(){
+
+        console.log("hello")
+      }
+
+      allEndpoints.onClick = yellowBox(allEndpoints)
+
     },
 
     componentDidUpdate: function(){
@@ -109,13 +121,14 @@ var MasterLayout = React.createClass({
     render: function(){
       return(
           <div id="navigation">
+              <About  />
               {Object.keys(this.state.endpoints).map(this.renderEndpoints)}
           </div>
         )
       }
     });
 
-
+        // Child of Navigation component
         var NavEndpt = React.createClass({
 
           render: function(){
@@ -128,27 +141,8 @@ var MasterLayout = React.createClass({
         
           }
         })
-            
 
-  // Different Blog components for each route //
-    
-    /*
-      // Games on High Settings //
-      var GamesOnHighSettings = React.createClass({
-        render: function(){
-          return <h1>Games on High Settings</h1>
-        }
-      });
-
-      // Podcast //
-      var Podcast = React.createClass({
-        render: function(){
-          return <h1>Podcast</h1>
-        }
-      });
-    */
-
-      // Projects //
+      // Projects Route //
       var Projects = React.createClass({
           getInitialState: function(){
             var projects = require("./data/projectsObject");
@@ -189,7 +183,7 @@ var MasterLayout = React.createClass({
               )
           }
       })
-
+          // template for each individual project
           var Project = React.createClass({
 
 
@@ -238,7 +232,7 @@ var MasterLayout = React.createClass({
                 return (<p key={id ++}>{para}</p>)
           })
 
-          return(<div>{paragraphs}</div>)
+          return(<div id="paragraphs">{paragraphs}</div>)
 
         },
         render: function(){
@@ -272,22 +266,24 @@ var MasterLayout = React.createClass({
             )
         }   
       })
-
-/* 
-
-    Paths to new features:
-
-    <Child path="/games-on-high-settings" component={GamesOnHighSettings}></Child>
-    <Child path="/podcast" component={Podcast}></Child>
-*/
+// Animated "about me" pop out in browser and regular page in mobile
+var About = React.createClass({
+      render: function(){
+        return (
+          <div className="navLink" id="about">
+            <Link id="about-link" to="/">About</Link>
+          </div>
+          )
+      }
+})
 
 
 var routes = (
           <Router history={history}>
             <Route path="/" component={MasterLayout}>
               <IndexRoute component={CoverLetter}></IndexRoute>
-              <Child path="/projects" component={Projects}></Child>
-              <Child path="/*" component={NotFound}></Child>
+              <Route path="/projects" component={Projects}></Route>
+              <Route path="/*" component={NotFound}></Route>
             </Route>
           </Router>
   )

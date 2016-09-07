@@ -21,7 +21,7 @@
         height: 100%; } }
   #navigation .active {
     background: yellow; }
-  #navigation a {
+  #navigation a, #navigation span {
     text-decoration: none;
     flex: 1;
     align-self: center;
@@ -31,7 +31,7 @@
     color: black;
     text-align: center; }
     @media screen and (max-width: 1099px) {
-      #navigation a {
+      #navigation a, #navigation span {
         font-size: 3.5vh; } }
   #navigation a:visited {
     color: black; }

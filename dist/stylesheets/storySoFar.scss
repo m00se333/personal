@@ -45,18 +45,21 @@
             flex: 1;
             margin-top: 5%;
             
-
-            p{
-              font-family: 'Athiti', serif;
-              font-size: 3.5vh;
-
-              @media only screen 
-                and (min-device-width: 375px) 
-                and (max-device-width: 667px) 
-                and (-webkit-min-device-pixel-ratio: 2)
-                and (orientation: portrait){
-                font-size: 3.5em;
-              }
+            #paragraphs{
+              display: flex;
+              flex-direction: column
             }
+              p{
+                font-family: 'Athiti', serif;
+                font-size: 3.5vh;
+
+                @media only screen 
+                  and (min-device-width: 375px) 
+                  and (max-device-width: 667px) 
+                  and (-webkit-min-device-pixel-ratio: 2)
+                  and (orientation: portrait){
+                  font-size: 3.5em;
+                }
+              }
           }
         
