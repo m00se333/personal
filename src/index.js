@@ -45,6 +45,9 @@ var MasterLayout = React.createClass({
         activeRoute: this.props.activeRoute
       }           
     },
+    componentDidUpdate: function(){
+      
+    },
 
     // componentDidMount: function(){
     //     var cover = document.getElementById("cover");
@@ -116,33 +119,15 @@ var MasterLayout = React.createClass({
         // Child of Navigation component
         var NavEndpt = React.createClass({
           //switches state from true/false on one component
+
+
           handleClick: function(){
 
-            var clickedElement = document.getElementById(this.props.id)
+            this.setState({
+              active: true
+            })
 
-            console.log(clickedElement.id)
           },
-
-          yellowCheck: function(){
-            if (this.state.active === false){
-              document.getElementById(this.props.id).className = "navLink";
-            } else if (this.state.active === true){
-              this.makeBoxYellow();
-            }
-          },
-
-          makeBoxYellow: function(){
-            document.getElementById(this.props.id).className += " active"
-          },
-
-          componentDidMount: function(){
-
-            if (this.props.id === "cover"){
-              this.makeBoxYellow()
-            }
-            
-          },
-
           render: function(){
           
             return (
@@ -279,9 +264,7 @@ var MasterLayout = React.createClass({
       })
 // Animated "about me" pop out in browser and regular page in mobile
 var About = React.createClass({
-      z: function(){
-            console.log(this)
-          },
+      
 
       render: function(){
         return (
