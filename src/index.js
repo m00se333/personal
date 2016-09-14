@@ -45,56 +45,53 @@ var MasterLayout = React.createClass({
         activeRoute: this.props.activeRoute
       }           
     },
-    componentDidUpdate: function(){
-      
+    
+    componentDidMount: function(){
+        var cover = document.getElementById("cover");
+        var projects = document.getElementById("projects");
+        var about = document.getElementById("about");
+
+        var active = this.props.activeRoute
+
+        this.setActive();
     },
 
-    // componentDidMount: function(){
-    //     var cover = document.getElementById("cover");
-    //     var projects = document.getElementById("projects");
-    //     var about = document.getElementById("about");
+    resetClasses: function(){
+      var active = this.props.activeRoute
 
-    //     var active = this.props.activeRoute
+      var cover = document.getElementById("cover");
+      var projects = document.getElementById("projects");
+      var about = document.getElementById("about");    
 
-    //     this.setActive();
-    // },
+          cover.className = "navLink";
+          projects.className = "navLink";
+          about.className = "navLink";
+    },
 
-    // resetClasses: function(){
-    //   var active = this.props.activeRoute
+    setActive: function(){
+      var active = this.props.activeRoute
 
-    //   var cover = document.getElementById("cover");
-    //   var projects = document.getElementById("projects");
-    //   var about = document.getElementById("about");    
+      var cover = document.getElementById("cover");
+      var projects = document.getElementById("projects");
+      var about = document.getElementById("about");
 
-    //       cover.className = "navLink";
-    //       projects.className = "navLink";
-    //       about.className = "navLink";
-    // },
+            if (active === "/"){
 
-    // setActive: function(){
-    //   var active = this.props.activeRoute
+            cover.className += " active";
+          } else if (active === "/projects"){
 
-    //   var cover = document.getElementById("cover");
-    //   var projects = document.getElementById("projects");
-    //   var about = document.getElementById("about");
+            projects.className += " active"
+          } else if (active === "/about"){
+            about.className += " active"
+          }
+    },
 
-    //         if (active === "/"){
+    componentDidUpdate: function(){
 
-    //         cover.className += " active";
-    //       } else if (active === "/projects"){
+      this.resetClasses();
+      this.setActive();
 
-    //         projects.className += " active"
-    //       } else if (active === "/about"){
-    //         about.className += " active"
-    //       }
-    // },
-
-    // componentDidUpdate: function(){
-
-    //   this.resetClasses();
-    //   this.setActive();
-
-    // },
+    },
 
     renderEndpoints: function(key){
       var endpointDetails = this.state.endpoints[key];
@@ -123,9 +120,7 @@ var MasterLayout = React.createClass({
 
           handleClick: function(){
 
-            this.setState({
-              active: true
-            })
+            console.log("hello from " + this.props.id)
 
           },
           render: function(){
@@ -265,11 +260,33 @@ var MasterLayout = React.createClass({
 // Animated "about me" pop out in browser and regular page in mobile
 var About = React.createClass({
       
+      getInitialState: function(){
+        var data = require("./data/aboutPage")
+
+          return {
+
+            data: data
+
+          }
+      },
+
+      formatPost: function(){
+          var postContent = this.state.data.body;
+          var id = 1;
+
+          var paragraphs = postContent.map(function(para){
+                return (<p key={id ++}>{para}</p>)
+          })
+
+          return(<div id="paragraphs">{paragraphs}</div>)
+
+        },
 
       render: function(){
         return (
-          <div onClick={this.z} className="navLink" id="about">
-            <Link id="about-link" to="/">About</Link>
+          <div className="navLink" id="about">
+            <img src={this.state.data.img} alt=""/>
+            <div>{this.formatPost()}</div>
           </div>
           )
       }
@@ -280,6 +297,7 @@ var routes = (
           <Router history={history}>
             <Route path="/" component={MasterLayout}>
               <IndexRoute component={CoverLetter}></IndexRoute>
+              <Route path="/about" component={About}></Route>
               <Route path="/projects" component={Projects}></Route>
               <Route path="/*" component={NotFound}></Route>
             </Route>

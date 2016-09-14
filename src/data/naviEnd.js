@@ -1,6 +1,6 @@
 module.exports = {
               about:{
-                url: "",
+                url: "/about",
                 title: "About",
                 id: "about",
                 active: false
