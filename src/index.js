@@ -283,10 +283,20 @@ var About = React.createClass({
         },
 
       render: function(){
+
+        var data = this.state.data;
+
         return (
           
             <div className="postWrapper">
-              <div id="testFrame"></div>
+              <div id="header">
+                <div id="frameContainer">
+                  <img src={data.img} alt="Noble 6"/>
+                </div>
+                <span id="imageCaption">{data.imgCaption}</span>
+              </div>
+              
+              
               <div id="postBody">{this.formatPost()}</div>
             </div>
           )

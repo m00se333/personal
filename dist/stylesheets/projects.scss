@@ -1,38 +1,4 @@
-/* Helpers */
-@import "browserSizes";
-
-
-#container {
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-  flex-direction: column;
-  
-    @import "navigation";
-    
-    @import "content";
-    @import "about";
-    @import "storySoFar";
-    
-
-      
-      /* Projects Styles */
-
-      #projectsHeader{
-          display: flex;
-          align-self: center;
-          margin: 5% 0% 10%;
-        
-        h1 {
-          margin: 0;
-          font-size: 6vh;
-          font-family: 'Athiti', serif;
-          color: black;
-
-        }
-      }
-
-      #projectsBody{
+#projectsBody{
         display: flex;
         flex-wrap: wrap;
         align-items: baseline;  
@@ -80,16 +46,3 @@
             }
           }
       }
-
-      /* End Projects Styles */
-
-}
-
-
-
-
-
-
-
-
-

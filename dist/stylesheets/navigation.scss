@@ -1,27 +1,13 @@
 /* Navigation Styles */
       #navigation{
-        flex: 1 1 200px;
+        flex: 1;
         display: flex;
         background: #9b59b6;
-        flex-direction: column;
+        flex-direction: row;
 
-        @media screen and (max-width: 1099px){
-          flex-direction: row;
-          height: 12vh;
-        }
           div {
             display: flex;
             flex: 1;
-            height: 30vh;
-            padding: 0;
-            align-self: center;
-            width: 100%;
-
-            
-            @media screen and (max-width: 1099px){
-              flex-direction: row;
-              height: 100%;
-            }
           }
 
           .active{
@@ -41,10 +27,12 @@
             align-items: center;
             justify-content: center;
 
-              @media screen and (max-width: 1099px){
-                font-size: 3.5vh;
-              }
-
+              @media only screen and (orientation: portrait){
+                  font-size: 3.5vh;
+                }
+              @media only screen and (orientation: landscape){
+                  font-size: 5vh;
+                }
           }
           
           a:visited{
