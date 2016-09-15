@@ -2,6 +2,7 @@
   height: 400px;
   width: 300px;
   border: 1px solid black;
-  margin: 0 auto; }
+  margin: 0 auto;
+  flex: 1; }
 
 /*# sourceMappingURL=about.css.map */

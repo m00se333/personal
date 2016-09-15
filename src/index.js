@@ -284,10 +284,11 @@ var About = React.createClass({
 
       render: function(){
         return (
-          <div className="navLink" id="about">
-            <img src={this.state.data.img} alt=""/>
-            <div>{this.formatPost()}</div>
-          </div>
+          
+            <div className="postWrapper">
+              <div id="testFrame"></div>
+              <div id="postBody">{this.formatPost()}</div>
+            </div>
           )
       }
 })
