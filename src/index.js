@@ -146,17 +146,24 @@ var MasterLayout = React.createClass({
 
           renderProjects: function(key){
 
-            var projectDetails = this.state.projects[key];
+            if (key != "background" ){
 
-            var data = {
-                url: projectDetails.url,
-                github: projectDetails.github,
-                desc: projectDetails.description
+                  var projectDetails = this.state.projects[key];
+
+                  var data = {
+                      url: projectDetails.url,
+                      github: projectDetails.github,
+                      desc: projectDetails.description
+                  }
+
+                  return(
+                      <Project id={key} key={key} data={data}/>
+                    )
+                } 
+
+            else {
+            console.log("it worked")
             }
-
-            return(
-                <Project id={key} key={key} data={data}/>
-              )
           },
 
           render: function(){
