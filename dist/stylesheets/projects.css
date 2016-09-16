@@ -1,0 +1,35 @@
+#projectsBody {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline; }
+  @media (orientation: portrait) {
+    #projectsBody {
+      flex-direction: column; } }
+  #projectsBody .project {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 1%;
+    padding: 0 4%;
+    background: #ececec; }
+    @media (orientation: portrait) {
+      #projectsBody .project {
+        padding: 0 2%;
+        margin: 3% 1%; } }
+    #projectsBody .project h1 {
+      font-size: 4.5vh; }
+    #projectsBody .project a {
+      text-decoration: none;
+      margin: 1% 0;
+      color: black;
+      font-size: 3.5vh; }
+    #projectsBody .project p {
+      font-size: 3.5vh; }
+    #projectsBody .project a:visited {
+      color: black; }
+    #projectsBody .project a:hover {
+      text-decoration: underline; }
+    #projectsBody .project p, #projectsBody .project a, #projectsBody .project h1 {
+      font-family: 'Athiti', serif; }
+
+/*# sourceMappingURL=projects.css.map */
