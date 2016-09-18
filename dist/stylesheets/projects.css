@@ -1,3 +1,19 @@
+#projectBackground {
+  background-image: url("../public/test2o100.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+#projectsHeader {
+  display: flex;
+  align-self: center;
+  margin: 5% 0%; }
+  #projectsHeader h1 {
+    margin: 0;
+    font-size: 6vh;
+    font-family: 'Athiti', serif;
+    color: black; }
+
 #projectsBody {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +27,8 @@
     flex-direction: column;
     margin: 1%;
     padding: 0 4%;
-    background: #ececec; }
+    background: #ececec;
+    opacity: 0.95; }
     @media (orientation: portrait) {
       #projectsBody .project {
         padding: 0 2%;

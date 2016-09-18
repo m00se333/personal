@@ -9,79 +9,13 @@
   flex-direction: column;
   
     @import "navigation";
-    
     @import "content";
     @import "about";
     @import "storySoFar";
-    
+    @import "projects";    
 
       
-      /* Projects Styles */
-
-      #projectsHeader{
-          display: flex;
-          align-self: center;
-          margin: 5% 0% 10%;
-        
-        h1 {
-          margin: 0;
-          font-size: 6vh;
-          font-family: 'Athiti', serif;
-          color: black;
-
-        }
-      }
-
-      #projectsBody{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;  
-
-          @media (orientation: portrait){
-            flex-direction: column;
-          }
-
-          .project{
-            display: flex;
-            flex: 1;
-            flex-direction: column;
-            margin: 1%;
-            padding: 0 4%;
-            background: #ececec;  
-
-            @media (orientation: portrait){
-            padding: 0 2%;
-            margin: 3% 1%;
-            }
-
-            h1{
-              font-size: 4.5vh;
-            }
-
-            a {
-              text-decoration: none;
-              margin: 1% 0;
-              color: black;
-              font-size: 3.5vh;
-            }
-
-            p{
-              font-size: 3.5vh;
-            }
-
-            a:visited{
-              color: black;
-            }
-            a:hover{
-              text-decoration: underline;
-            }
-            p,a,h1{
-              font-family: 'Athiti', serif;
-            }
-          }
-      }
-
-      /* End Projects Styles */
+     
 
 }
 

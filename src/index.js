@@ -138,6 +138,7 @@ var MasterLayout = React.createClass({
           getInitialState: function(){
             var projects = require("./data/projectsObject");
             
+            
             return{
               projects: projects
             }
@@ -162,15 +163,17 @@ var MasterLayout = React.createClass({
                 } 
 
             else {
-            console.log("it worked")
+              
+              console.log("else fired")
+
             }
           },
 
           render: function(){
 
             return (
-                <div className="postWrapper">
-                  <div id="projectsHeader">
+                <div className="postWrapper" id="projectBackground">
+                  <div id="projectsHeader" >
                     <h1>Projects</h1>
                   </div>
                   <div id="projectsBody">
