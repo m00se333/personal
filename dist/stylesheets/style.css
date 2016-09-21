@@ -20,6 +20,9 @@ body {
     flex-direction: row;
     align-items: center;
     overflow: hidden; }
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+      #container #navigation {
+        flex: 1.5; } }
     #container #navigation div {
       display: flex;
       flex: 1;
@@ -40,6 +43,9 @@ body {
       align-items: center;
       justify-content: center;
       text-decoration: none; }
+      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+        #container #navigation a {
+          font-size: 5vh; } }
     #container #navigation a:visited {
       color: black; }
     #container #navigation a:hover {

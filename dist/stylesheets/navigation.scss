@@ -7,6 +7,10 @@
   align-items: center;
   overflow: hidden;
 
+  @media #{$iphone6Plus_landscape, $iphone_landscape, $ipad_landscape}{
+    flex: 1.5;
+  }
+
 
     div {
       display: flex;
@@ -32,6 +36,10 @@
       align-items: center;
       justify-content: center;
       text-decoration: none;
+
+      @media #{$iphone6Plus_landscape, $iphone_landscape, $ipad_landscape}{
+        font-size: 5vh;
+      }
 
     }
     
