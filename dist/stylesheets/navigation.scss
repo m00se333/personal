@@ -37,6 +37,7 @@
 
     a {
       display: flex;
+      flex: 1 1 auto;
       font-size: 4vh;
       margin: 0 auto;
       font-family: 'Athiti', serif;
@@ -47,14 +48,6 @@
       justify-content: center;
       text-decoration: none;
 
-        @media #{$iphone_portrait, $iphone6Plus_portrait, $ipad_portrait}{
-            font-size: 3.5vh;
-            flex: 1 1 70px;
-          }
-        @media #{$iphone_landscape, $iphone6Plus_landscape, $ipad_landscape}{
-            font-size: 5vh;
-            flex: 1 1 50px;
-          }
     }
     
     a:visited{
