@@ -31,7 +31,8 @@
     margin: 1%;
     padding: 0 4%;
     background: #ececec;
-    opacity: 0.95; }
+    opacity: 0.95;
+    width: 100%; }
     @media (orientation: portrait) {
       #projectsBody .project {
         padding: 0 2%;
