@@ -1,65 +1,62 @@
 #titleDate{
-              flex: 2;
-              display: flex;
-              flex-direction: column;
-              background-position-y: -100px;
-              background-repeat: no-repeat;
-              
-                
-                h2{
-                font-size: 6vw;
-                align-self: center;
-                order: 1;
-                font-family: 'Athiti', serif;
-                flex: 1;
-
-                    @media #{$iphone6Plus_portrait, $iphone_portrait}{
-                      font-size: 5.2vh;
-                    }
+  display: flex;
+  flex-direction: column;
+  background-position-y: -100px;
+  background-repeat: no-repeat;
 
                 
-                }
+    h2{
+    font-size: 6vw;
+    align-self: center;
+    order: 1;
+    font-family: 'Athiti', serif;
+    flex: 1;
 
-                span{
-                margin: 0 auto 2%;
-                align-self: center;
-                font-size: 4vw;
-                order: 2;
-                font-family: 'Athiti', serif;
-                flex: 1;
-                @media screen and (max-width: 700px){
-                  font-size: 8vw;
-                }
+        @media #{$iphone6Plus_portrait, $iphone_portrait}{
+          font-size: 5.2vh;
+        }
 
-                
-                }
-              }
+    
+    }
+
+    span{
+    margin: 0 auto 2%;
+    align-self: center;
+    font-size: 4vw;
+    order: 2;
+    font-family: 'Athiti', serif;
+    flex: 1;
+    @media screen and (max-width: 700px){
+      font-size: 8vw;
+    }
+
+    
+    }
+  }
             
-          /* this controls both the about and cover page, so careful */
-          #postBody{
-            display: flex;
-            flex-wrap: wrap;
-            font-size: 1.6vw;
-            overflow: scroll;
-            padding: 0 5%;
-            flex: 1;
-            margin-top: 5%;
-            
-            #paragraphs{
-              display: flex;
-              flex-direction: column
-            }
+/* this controls both the about and cover page, so careful */
+#postBody{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.6vw;
+  padding: 0 5%;
+  flex: 1;
+  margin-top: 5%;
+  
+  #paragraphs{
+    display: flex;
+    flex-direction: column
+  }
 
-              p{
-                font-family: 'Athiti', serif;
-                font-size: 3.5vh;
+    p{
+      font-family: 'Athiti', serif;
+      font-size: 3.5vh;
 
-                @media only screen and (orientation: portrait){
-                  font-size: 3.5em;
-                }
-                @media only screen and (max-device-width: 736px) and (orientation: landscape){
-                  font-size: 2.5em;
-                }
-              }
-          }
-        
+      @media only screen and (orientation: portrait){
+        font-size: 3.5em;
+      }
+      @media only screen and (max-device-width: 736px) and (orientation: landscape){
+        font-size: 2.5em;
+      }
+    }
+}

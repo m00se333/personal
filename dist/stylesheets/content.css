@@ -1,9 +1,11 @@
 #content {
   flex: 7;
   overflow: scroll;
-  height: 100%; }
+  height: 100%;
+  display: flex; }
   #content .postWrapper {
     display: flex;
+    flex: 1;
     flex-direction: column;
     /* Story So Far Styles */ }
 

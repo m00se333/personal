@@ -44,11 +44,9 @@
   #container #content {
     flex: 7;
     overflow: scroll;
-    height: 100%;
-    display: flex; }
+    height: 100%; }
     #container #content .postWrapper {
       display: flex;
-      flex: 1;
       flex-direction: column;
       /* Story So Far Styles */ }
   #container #header {
@@ -56,23 +54,26 @@
     flex-direction: column;
     align-items: center; }
     #container #header #frameContainer {
-      height: 250px;
-      width: 240px;
+      height: 45vh;
+      width: 30%;
       margin-top: 3%;
       flex: 1; }
       @media only screen and (orientation: portrait) {
         #container #header #frameContainer {
           height: 35vh;
           width: 60%; } }
+      @media only screen and (orientation: landscape) {
+        #container #header #frameContainer {
+          height: 55vh;
+          width: 35%; } }
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
         #container #header #frameContainer {
           height: 35vh;
-          width: 50%; } }
+          width: 55%; } }
       @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
         #container #header #frameContainer {
-          margin-top: 1%;
-          width: 30%;
-          height: 38vh; } }
+          width: 40%;
+          height: 55vh; } }
       #container #header #frameContainer img {
         height: 100%;
         width: 100%; }
@@ -83,6 +84,7 @@
       font-style: italic;
       color: grey; }
   #container #titleDate {
+    flex: 2;
     display: flex;
     flex-direction: column;
     background-position-y: -100px;
@@ -110,6 +112,7 @@
     display: flex;
     flex-wrap: wrap;
     font-size: 1.6vw;
+    overflow: scroll;
     padding: 0 5%;
     flex: 1;
     margin-top: 5%; }
@@ -132,7 +135,6 @@
     background-size: cover; }
   #container #projectsHeader {
     display: flex;
-    flex: 1;
     align-self: center;
     margin: 3% 0%;
     background: black;
@@ -141,13 +143,15 @@
       margin: 0;
       font-size: 6vh;
       font-family: 'Athiti', serif;
-      color: white; }
+      color: white;
+      padding: 7%; }
   #container #projectsBody {
     display: flex;
-    flex: 9;
     flex-wrap: wrap;
-    align-items: baseline;
-    overflow: scroll; }
+    align-items: baseline; }
+    @media (orientation: portrait) {
+      #container #projectsBody {
+        flex-direction: column; } }
     #container #projectsBody .project {
       display: flex;
       flex: 1;

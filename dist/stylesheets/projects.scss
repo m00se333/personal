@@ -5,27 +5,29 @@
         background-size: cover;
         }
 #projectsHeader{
-          display: flex;
-          align-self: center;
-          margin: 5% 0%;
+    display: flex;
+    flex: 1;
+    align-self: center;
+    margin: 3% 0%;
+    background: black;
+    border: 1px solid white;
         
         h1 {
           margin: 0;
           font-size: 6vh;
           font-family: 'Athiti', serif;
-          color: black;
-
+          color: white;
+    
         }
       }
 
 #projectsBody{
         display: flex;
+        flex: 9;
         flex-wrap: wrap;
-        align-items: baseline;  
+        align-items: baseline; 
+        overflow: scroll; 
 
-          @media (orientation: portrait){
-            flex-direction: column;
-          }
 
           .project{
             display: flex;

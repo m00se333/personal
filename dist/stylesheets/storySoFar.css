@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$iphone6Plus_portrait".
-        on line 16 of ./storySoFar.scss
+        on line 15 of ./storySoFar.scss
 
-11:                 align-self: center;
-12:                 order: 1;
-13:                 font-family: 'Athiti', serif;
-14:                 flex: 1;
-15: 
-16:                     @media #{$iphone6Plus_portrait, $iphone_portrait}{
-17:                       font-size: 5.2vh;
-18:                     }
-19: 
-20:                 
-21:                 }
+10:     align-self: center;
+11:     order: 1;
+12:     font-family: 'Athiti', serif;
+13:     flex: 1;
+14: 
+15:         @media #{$iphone6Plus_portrait, $iphone_portrait}{
+16:           font-size: 5.2vh;
+17:         }
+18: 
+19:     
+20:     }
 
 Backtrace:
-./storySoFar.scss:16
+./storySoFar.scss:15
 /Users/MMac/.rvm/gems/ruby-2.2.2/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Users/MMac/.rvm/gems/ruby-2.2.2/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 /Users/MMac/.rvm/gems/ruby-2.2.2/gems/sass-3.4.22/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
@@ -88,4 +88,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$iphone6Plus_portrait\".\A         on line 16 of ./storySoFar.scss\A \A 11:                 align-self: center;\A 12:                 order: 1;\A 13:                 font-family: 'Athiti', serif;\A 14:                 flex: 1;\A 15: \A 16:                     @media #{$iphone6Plus_portrait, $iphone_portrait}{\A 17:                       font-size: 5.2vh;\A 18:                     }\A 19: \A 20:                 \A 21:                 }"; }
+  content: "Error: Undefined variable: \"$iphone6Plus_portrait\".\A         on line 15 of ./storySoFar.scss\A \A 10:     align-self: center;\A 11:     order: 1;\A 12:     font-family: 'Athiti', serif;\A 13:     flex: 1;\A 14: \A 15:         @media #{$iphone6Plus_portrait, $iphone_portrait}{\A 16:           font-size: 5.2vh;\A 17:         }\A 18: \A 19:     \A 20:     }"; }

@@ -3,26 +3,23 @@
   flex-direction: column;
   align-items: center; }
   #header #frameContainer {
-    height: 45vh;
-    width: 30%;
+    height: 250px;
+    width: 240px;
     margin-top: 3%;
     flex: 1; }
     @media only screen and (orientation: portrait) {
       #header #frameContainer {
         height: 35vh;
         width: 60%; } }
-    @media only screen and (orientation: landscape) {
-      #header #frameContainer {
-        height: 55vh;
-        width: 35%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
       #header #frameContainer {
         height: 35vh;
-        width: 55%; } }
+        width: 50%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
       #header #frameContainer {
-        width: 40%;
-        height: 55vh; } }
+        margin-top: 1%;
+        width: 30%;
+        height: 38vh; } }
     #header #frameContainer img {
       height: 100%;
       width: 100%; }

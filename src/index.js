@@ -173,9 +173,6 @@ var MasterLayout = React.createClass({
 
             return (
                 <div className="postWrapper" id="projectBackground">
-                  <div id="projectsHeader" >
-                    <h1>Projects</h1>
-                  </div>
                   <div id="projectsBody">
                     {Object.keys(this.state.projects).map(this.renderProjects)}
                   </div>
@@ -250,9 +247,9 @@ var MasterLayout = React.createClass({
                     <h2>{post.title}</h2>
                     <span>{post.date}</span>
                   </div>
-                <div id="postBody">
-                    {this.formatPost()}
-                </div>
+              <div id="postBody">
+                  {this.formatPost()}
+              </div>
               </div>
             )
         }
