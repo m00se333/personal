@@ -30,6 +30,17 @@ body {
       flex: inherit;
       height: 100%; }
     #container #navigation .active {
+      display: flex;
+      font-size: 4vh;
+      margin: 0 auto;
+      font-family: 'Athiti', serif;
+      color: black;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
       background: yellow; }
     #container #navigation a {
       display: flex;
