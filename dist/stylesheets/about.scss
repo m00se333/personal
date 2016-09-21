@@ -5,17 +5,15 @@
 
     display: flex;
     flex: 1;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-
-
-
 
     #frameContainer{
       height: 250px;
       width: 240px;
       margin-top: 3%;
       flex: 1;
+      order: 1;
 
       @media only screen and (orientation: portrait){
           height: 35vh; 
@@ -46,6 +44,7 @@
         flex: 1;
         font-size: 2vh;
         font-style: italic;
-        color: grey;  
+        color: grey; 
+        order: 2; 
     }
 }
