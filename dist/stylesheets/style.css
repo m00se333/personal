@@ -19,35 +19,34 @@ body {
     background: #9b59b6;
     flex-direction: row;
     align-items: center; }
-    @media only screen and (orientation: portrait) {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
       #container #navigation {
         flex: 1 1 70px; } }
-    @media only screen and (orientation: landscape) {
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
       #container #navigation {
         flex: 1 1 50px; } }
     #container #navigation div {
       display: flex;
       flex: inherit;
-      height: 100%; }
+      height: 100%;
+      width: 100%; }
     #container #navigation .active {
       background: yellow; }
     #container #navigation a {
       display: flex;
-      flex: inherit;
       font-size: 4vh;
       margin: 0 auto;
       font-family: 'Athiti', serif;
       color: black;
-      height: 100%;
       width: 100%;
       text-align: center;
       align-items: center;
       justify-content: center;
       text-decoration: none; }
-      @media only screen and (orientation: portrait) {
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
         #container #navigation a {
           font-size: 3.5vh; } }
-      @media only screen and (orientation: landscape) {
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
         #container #navigation a {
           font-size: 5vh; } }
     #container #navigation a:visited {
