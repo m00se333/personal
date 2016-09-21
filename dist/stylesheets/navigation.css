@@ -1,4 +1,3 @@
-/* Navigation Styles */
 #navigation {
   flex: 1;
   display: flex;
@@ -12,18 +11,18 @@
   #navigation .active {
     background: yellow; }
   #navigation a {
-    text-decoration: none;
-    flex: 1;
+    display: flex;
+    flex: 1 1 auto;
     font-size: 4vh;
     margin: 0 auto;
     font-family: 'Athiti', serif;
     color: black;
-    text-align: center;
     height: 100%;
     width: 100%;
-    display: flex;
+    text-align: center;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    text-decoration: none; }
     @media only screen and (orientation: portrait) {
       #navigation a {
         font-size: 3.5vh; } }
@@ -36,7 +35,5 @@
     text-shadow: 0em 0em 0.2em white; }
   #navigation a:active {
     text-shadow: 0em 0em 0.2em white; }
-
-/* End Navigation Styles */
 
 /*# sourceMappingURL=navigation.css.map */

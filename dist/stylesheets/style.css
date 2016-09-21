@@ -12,8 +12,6 @@ body {
   flex-wrap: wrap;
   height: 100vh;
   flex-direction: column;
-  /* Navigation Styles */
-  /* End Navigation Styles */
   /* this controls both the about and cover page, so careful */ }
   #container #navigation {
     flex: 1;
@@ -28,18 +26,18 @@ body {
     #container #navigation .active {
       background: yellow; }
     #container #navigation a {
-      text-decoration: none;
-      flex: 1;
+      display: flex;
+      flex: 1 1 auto;
       font-size: 4vh;
       margin: 0 auto;
       font-family: 'Athiti', serif;
       color: black;
-      text-align: center;
       height: 100%;
       width: 100%;
-      display: flex;
+      text-align: center;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      text-decoration: none; }
       @media only screen and (orientation: portrait) {
         #container #navigation a {
           font-size: 3.5vh; } }
