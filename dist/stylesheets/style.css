@@ -27,9 +27,15 @@ body {
         flex: 1 1 50px; } }
     #container #navigation div {
       display: flex;
-      flex: inherit;
+      flex: 1;
       height: 100%;
       width: 100%; }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+        #container #navigation div {
+          flex: 1 1 70px; } }
+      @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+        #container #navigation div {
+          flex: 1 1 50px; } }
     #container #navigation .active {
       background: yellow; }
     #container #navigation a {
