@@ -11,7 +11,9 @@
     height: 100%;
     width: 100%; }
   #navigation .active {
-    background: yellow; }
+    background: yellow;
+    height: 100%;
+    width: 100%; }
   #navigation a {
     text-decoration: none;
     flex: 1;

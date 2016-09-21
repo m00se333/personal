@@ -27,7 +27,9 @@ body {
       height: 100%;
       width: 100%; }
     #container #navigation .active {
-      background: yellow; }
+      background: yellow;
+      height: 100%;
+      width: 100%; }
     #container #navigation a {
       text-decoration: none;
       flex: 1;
@@ -89,7 +91,6 @@ body {
         height: 100%;
         width: 100%; }
     #container #header #imageCaption {
-      margin: 1% auto 0;
       flex: 1;
       font-size: 2vh;
       font-style: italic;
@@ -159,7 +160,8 @@ body {
     flex: 9;
     flex-wrap: wrap;
     align-items: baseline;
-    overflow: scroll; }
+    overflow: scroll;
+    flex-direction: row; }
     #container #projectsBody .project {
       display: flex;
       flex: 1;
