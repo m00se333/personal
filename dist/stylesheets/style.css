@@ -173,7 +173,8 @@ body {
       @media (orientation: portrait) {
         #container #projectsBody .project {
           padding: 0 2%;
-          margin: 3% 1%; } }
+          margin: 3% 1%;
+          flex: 1 1 auto; } }
       #container #projectsBody .project h1 {
         font-size: 4.5vh; }
       #container #projectsBody .project a {
