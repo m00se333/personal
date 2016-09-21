@@ -12,7 +12,7 @@
       flex: 1 1 50px; } }
   #navigation div {
     display: flex;
-    flex: 1;
+    flex: inherit;
     height: 100%; }
   #navigation .active {
     background: yellow; }
@@ -24,8 +24,6 @@
     font-family: 'Athiti', serif;
     color: black;
     height: 100%;
-    width: 100%;
-    text-align: center;
     align-items: center;
     justify-content: center;
     text-decoration: none; }

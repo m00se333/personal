@@ -22,7 +22,8 @@
   flex: 9;
   flex-wrap: wrap;
   align-items: baseline;
-  overflow: scroll; }
+  overflow: scroll;
+  margin-top: 2%; }
   #projectsBody .project {
     display: flex;
     flex: 1;
