@@ -14,6 +14,7 @@
   #navigation a {
     display: flex;
     flex: 1;
+    height: 100%;
     font-size: 4vh;
     margin: 0 auto;
     font-family: 'Athiti', serif;
