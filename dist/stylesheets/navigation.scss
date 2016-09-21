@@ -13,7 +13,9 @@
 
 
     div {
-      display: flex;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
       flex: 1;
       height: 100%;
       width: 100%;
@@ -21,12 +23,13 @@
 
     .active{
       background: yellow;
-      padding: 7% 0;
     }
 
     a {
       display: flex;
-      flex: 1;
+      -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
       height: 100%;
       font-size: 4vh;
       margin: 0 auto;
