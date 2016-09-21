@@ -37,7 +37,8 @@ body {
         #container #navigation div {
           flex: 1 1 50px; } }
     #container #navigation .active {
-      background: yellow; }
+      background: yellow;
+      flex: 1 1 auto; }
     #container #navigation a {
       display: flex;
       font-size: 4vh;
