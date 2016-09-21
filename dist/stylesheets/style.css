@@ -37,8 +37,7 @@ body {
         #container #navigation div {
           flex: 1 1 50px; } }
     #container #navigation .active {
-      background: yellow;
-      flex: 1 1 auto; }
+      background: yellow; }
     #container #navigation a {
       display: flex;
       font-size: 4vh;
@@ -52,10 +51,12 @@ body {
       text-decoration: none; }
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
         #container #navigation a {
-          font-size: 3.5vh; } }
+          font-size: 3.5vh;
+          flex: 1 1 70px; } }
       @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
         #container #navigation a {
-          font-size: 5vh; } }
+          font-size: 5vh;
+          flex: 1 1 50px; } }
     #container #navigation a:visited {
       color: black; }
     #container #navigation a:hover {

@@ -33,7 +33,6 @@
 
     .active{
       background: yellow;
-      flex: 1 1 auto;
     }
 
     a {
@@ -50,9 +49,11 @@
 
         @media #{$iphone_portrait, $iphone6Plus_portrait, $ipad_portrait}{
             font-size: 3.5vh;
+            flex: 1 1 70px;
           }
         @media #{$iphone_landscape, $iphone6Plus_landscape, $ipad_landscape}{
             font-size: 5vh;
+            flex: 1 1 50px;
           }
     }
     
