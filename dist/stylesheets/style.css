@@ -71,7 +71,7 @@ body {
       height: 250px;
       width: 240px;
       margin-top: 3%;
-      flex: 1;
+      flex: 1 1 auto;
       order: 1; }
       @media only screen and (orientation: portrait) {
         #container #header #frameContainer {
@@ -90,7 +90,7 @@ body {
         height: 100%;
         width: 100%; }
     #container #header #imageCaption {
-      flex: 1;
+      flex: 1 1 auto;
       font-size: 2vh;
       font-style: italic;
       color: grey;
