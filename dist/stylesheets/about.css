@@ -1,7 +1,7 @@
 #header {
   display: flex;
   flex: 1;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center; }
   #header #frameContainer {
     height: 250px;

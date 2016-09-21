@@ -65,7 +65,7 @@ body {
   #container #header {
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; }
     #container #header #frameContainer {
       height: 250px;
@@ -155,16 +155,14 @@ body {
       color: white; }
   #container #projectsBody {
     display: flex;
-    flex: 9;
+    flex: 9 1 auto;
     flex-wrap: wrap;
+    flex-direction: row;
     align-items: baseline;
     overflow: scroll; }
-    @media (orientation: portrait) {
-      #container #projectsBody {
-        flex-direction: row; } }
     #container #projectsBody .project {
       display: flex;
-      flex: 1;
+      flex: 1 1 auto;
       flex-direction: column;
       margin: 1%;
       padding: 0 4%;
