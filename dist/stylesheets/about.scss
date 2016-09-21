@@ -4,8 +4,13 @@
 #header{
 
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
+
+    @media only screen and (orientation: portrait) {
+      flex-direction: column;
+    }
 
 
     #frameContainer{

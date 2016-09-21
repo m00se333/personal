@@ -22,8 +22,10 @@
   flex: 9;
   flex-wrap: wrap;
   align-items: baseline;
-  overflow: scroll;
-  flex-direction: row; }
+  overflow: scroll; }
+  @media (orientation: portrait) {
+    #projectsBody {
+      flex-direction: row; } }
   #projectsBody .project {
     display: flex;
     flex: 1;

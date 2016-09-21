@@ -27,7 +27,11 @@
         flex-wrap: wrap;
         align-items: baseline; 
         overflow: scroll; 
-        flex-direction: row;
+        
+
+          @media (orientation: portrait){
+              flex-direction: row;
+            }
 
 
           .project{

@@ -1,7 +1,11 @@
 #header {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center; }
+  @media only screen and (orientation: portrait) {
+    #header {
+      flex-direction: column; } }
   #header #frameContainer {
     height: 250px;
     width: 240px;

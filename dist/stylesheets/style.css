@@ -1,4 +1,12 @@
 /* Helpers */
+html {
+  overflow: hidden;
+  height: 100%; }
+
+body {
+  height: 100%;
+  overflow: auto; }
+
 #container {
   display: flex;
   flex-wrap: wrap;
@@ -56,8 +64,12 @@
       /* Story So Far Styles */ }
   #container #header {
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center; }
+    @media only screen and (orientation: portrait) {
+      #container #header {
+        flex-direction: column; } }
     #container #header #frameContainer {
       height: 250px;
       width: 240px;
@@ -149,8 +161,10 @@
     flex: 9;
     flex-wrap: wrap;
     align-items: baseline;
-    overflow: scroll;
-    flex-direction: row; }
+    overflow: scroll; }
+    @media (orientation: portrait) {
+      #container #projectsBody {
+        flex-direction: row; } }
     #container #projectsBody .project {
       display: flex;
       flex: 1;
