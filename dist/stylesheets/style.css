@@ -24,19 +24,16 @@ body {
       #container #navigation {
         flex: 1.5; } }
     #container #navigation div {
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
+      display: flex;
       flex: 1;
       height: 100%;
       width: 100%; }
     #container #navigation .active {
-      background: yellow; }
+      background: yellow;
+      padding: 7% 0; }
     #container #navigation a {
       display: flex;
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
+      flex: 1;
       height: 100%;
       font-size: 4vh;
       margin: 0 auto;
