@@ -4,7 +4,6 @@
 #header{
 
     display: flex;
-    flex: 1 1 100px;
     flex-direction: column;
     align-items: center;
 
@@ -13,27 +12,30 @@
     }
 
     #frameContainer{
-      height: 250px;
-      width: 240px;
-      margin-top: 3%;
+      width: 18%;
+      height: 50vh;
       flex: 1 1 auto;
       order: 1;
 
-      @media only screen and (orientation: portrait){
-          height: 35vh; 
-          width: 60%;    
+      @media #{$iphone_portrait, $iphone5_portrait, $iphone6Plus_portrait, $ipad_portrait}{
+          height: 39vh; 
+          width: 50%;    
+        }
+      @media #{$iphone_landscape, $iphone5_landscape, $iphone6Plus_landscape, $ipad_landscape}{
+          height: 55vh; 
+          width: 22%;    
         }
     
 
       @media #{$ipad_portrait}{
-          height: 35vh; 
+          height: 50vh; 
           width: 50%;
         }
 
       @media #{$ipad_landscape}{
           margin-top: 1%;
           width: 30%;
-          height: 38vh;
+          height: 55vh;
         }
 
         img {
