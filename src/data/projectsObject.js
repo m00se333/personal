@@ -1,5 +1,5 @@
 module.exports ={
-  background:{ image: "testBackground.png"},
+  background:{ image: "./images/testBackground.png"},
   abcusd:{
     url: "abcusd.herokuapp.com",
     github:"github.com/m00se333/ABCUSD",
