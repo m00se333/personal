@@ -16,8 +16,8 @@ module.exports ={
   ,
 
  bakeryDisplay:{
-     url: "michaelbakery/herokuapp.com",
-     github: "github.com/m00se333/michaelBakery",
+     url: "michaelbakery.herokuapp.com",
+     github: "github.com/m00se333/bakeryDisplay",
      description: ["Bakery Display is my most recent freelance opprotunity. This website is written in ES6 and React. I was also able to get creative with React CSSTransitionGroups, open the gallery and behold a slick entrance and exit that looks great across platforms. Ever since using learning flexbox life has been good."
                     ,"Learning how to code using React has made coding really fun becuase I have a standardized approach to a project that I understand letting me take on more abitious projects. Stay tuned my client eventually wants a full fledged e commerce site!"]
    }
