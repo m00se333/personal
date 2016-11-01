@@ -1,0 +1,41 @@
+#header {
+  display: flex;
+  flex: 1 1 100px;
+  flex-direction: column;
+  align-items: center; }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+    #header {
+      flex: 1 1 250px; } }
+  #header #frameContainer {
+    height: 250px;
+    width: 240px;
+    margin-top: 3%;
+    flex: 1 1 auto;
+    order: 1; }
+    @media only screen and (orientation: portrait) {
+      #header #frameContainer {
+        height: 35vh;
+        width: 60%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+      #header #frameContainer {
+        height: 35vh;
+        width: 50%; } }
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+      #header #frameContainer {
+        margin-top: 1%;
+        width: 30%;
+        height: 38vh; } }
+    #header #frameContainer img {
+      height: 100%;
+      width: 100%; }
+  #header #imageCaption {
+    flex: 1 1 auto;
+    font-size: 2vh;
+    font-style: italic;
+    color: grey;
+    order: 2; }
+    @media only screen and (orientation: landscape) {
+      #header #imageCaption {
+        font-size: 3vh; } }
+
+/*# sourceMappingURL=about.css.map */

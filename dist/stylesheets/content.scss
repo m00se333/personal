@@ -1,0 +1,17 @@
+  #content {
+        flex: 7;
+        overflow: scroll;
+        height: 100%;
+        display: flex;
+
+        
+
+        .postWrapper{
+          display: flex;  
+          flex-direction: column;
+
+        }
+
+      }
+
+            

@@ -1,0 +1,57 @@
+#projectBackground {
+  background-image: url("../public/test2o100.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
+#projectsHeader {
+  display: flex;
+  flex: 1;
+  align-self: center;
+  margin: 3% 0%;
+  background: black;
+  border: 1px solid white; }
+  #projectsHeader h1 {
+    margin: 0;
+    font-size: 6vh;
+    font-family: 'Athiti', serif;
+    color: white; }
+
+#projectsBody {
+  display: flex;
+  flex: 9;
+  flex-wrap: wrap;
+  align-items: baseline;
+  overflow: scroll;
+  margin-top: 2%; }
+  #projectsBody .project {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: 1%;
+    padding: 0 4%;
+    background: #ececec;
+    opacity: 0.95;
+    width: 100%; }
+    @media (orientation: portrait) {
+      #projectsBody .project {
+        padding: 0 2%;
+        margin: 3% 1%;
+        flex: 1 1 auto; } }
+    #projectsBody .project h1 {
+      font-size: 4.5vh; }
+    #projectsBody .project a {
+      text-decoration: none;
+      margin: 1% 0;
+      color: black;
+      font-size: 3.5vh; }
+    #projectsBody .project p {
+      font-size: 3.5vh; }
+    #projectsBody .project a:visited {
+      color: black; }
+    #projectsBody .project a:hover {
+      text-decoration: underline; }
+    #projectsBody .project p, #projectsBody .project a, #projectsBody .project h1 {
+      font-family: 'Athiti', serif; }
+
+/*# sourceMappingURL=projects.css.map */

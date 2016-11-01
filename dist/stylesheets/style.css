@@ -1,0 +1,198 @@
+/* Helpers */
+html {
+  overflow: hidden;
+  height: 100%; }
+
+body {
+  height: 100%;
+  overflow: auto; }
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  flex-direction: column;
+  /* this controls both the about and cover page, so careful */ }
+  #container #navigation {
+    flex: 1;
+    display: flex;
+    background: #9b59b6;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden; }
+    @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+      #container #navigation {
+        flex: 1.5; } }
+    #container #navigation div {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      width: 100%; }
+    #container #navigation .active {
+      background: yellow;
+      padding: 7% 0; }
+    #container #navigation a {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      font-size: 4vh;
+      margin: 0 auto;
+      font-family: 'Athiti', serif;
+      color: black;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none; }
+      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+        #container #navigation a {
+          font-size: 5vh; } }
+    #container #navigation a:visited {
+      color: black; }
+    #container #navigation a:hover {
+      text-shadow: 0em 0em 0.2em white; }
+    #container #navigation a:active {
+      text-shadow: 0em 0em 0.2em white; }
+  #container #content {
+    flex: 7;
+    overflow: scroll;
+    height: 100%;
+    display: flex; }
+    #container #content .postWrapper {
+      display: flex;
+      flex-direction: column; }
+  #container #header {
+    display: flex;
+    flex: 1 1 100px;
+    flex-direction: column;
+    align-items: center; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+      #container #header {
+        flex: 1 1 250px; } }
+    #container #header #frameContainer {
+      height: 250px;
+      width: 240px;
+      margin-top: 3%;
+      flex: 1 1 auto;
+      order: 1; }
+      @media only screen and (orientation: portrait) {
+        #container #header #frameContainer {
+          height: 35vh;
+          width: 60%; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
+        #container #header #frameContainer {
+          height: 35vh;
+          width: 50%; } }
+      @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
+        #container #header #frameContainer {
+          margin-top: 1%;
+          width: 30%;
+          height: 38vh; } }
+      #container #header #frameContainer img {
+        height: 100%;
+        width: 100%; }
+    #container #header #imageCaption {
+      flex: 1 1 auto;
+      font-size: 2vh;
+      font-style: italic;
+      color: grey;
+      order: 2; }
+      @media only screen and (orientation: landscape) {
+        #container #header #imageCaption {
+          font-size: 3vh; } }
+  #container #titleDate {
+    display: flex;
+    flex-direction: column;
+    background-position-y: -100px;
+    background-repeat: no-repeat; }
+    #container #titleDate h2 {
+      font-size: 6vw;
+      align-self: center;
+      order: 1;
+      font-family: 'Athiti', serif;
+      flex: 1; }
+      @media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait), only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+        #container #titleDate h2 {
+          font-size: 5.2vh; } }
+    #container #titleDate span {
+      margin: 0 auto 2%;
+      align-self: center;
+      font-size: 4vw;
+      order: 2;
+      font-family: 'Athiti', serif;
+      flex: 1; }
+      @media screen and (max-width: 700px) {
+        #container #titleDate span {
+          font-size: 8vw; } }
+  #container #postBody {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.6vw;
+    padding: 0 5%;
+    flex: 1; }
+    #container #postBody #paragraphs {
+      display: flex;
+      flex-direction: column; }
+    #container #postBody p {
+      font-family: 'Athiti', serif;
+      font-size: 3.5vh; }
+      @media only screen and (orientation: portrait) {
+        #container #postBody p {
+          font-size: 3.5em; } }
+      @media only screen and (max-device-width: 736px) and (orientation: landscape) {
+        #container #postBody p {
+          font-size: 2.5em; } }
+  #container #projectBackground {
+    background-image: url("../public/test2o100.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+  #container #projectsHeader {
+    display: flex;
+    flex: 1;
+    align-self: center;
+    margin: 3% 0%;
+    background: black;
+    border: 1px solid white; }
+    #container #projectsHeader h1 {
+      margin: 0;
+      font-size: 6vh;
+      font-family: 'Athiti', serif;
+      color: white; }
+  #container #projectsBody {
+    display: flex;
+    flex: 9;
+    flex-wrap: wrap;
+    align-items: baseline;
+    overflow: scroll;
+    margin-top: 2%; }
+    #container #projectsBody .project {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      margin: 1%;
+      padding: 0 4%;
+      background: #ececec;
+      opacity: 0.95;
+      width: 100%; }
+      @media (orientation: portrait) {
+        #container #projectsBody .project {
+          padding: 0 2%;
+          margin: 3% 1%;
+          flex: 1 1 auto; } }
+      #container #projectsBody .project h1 {
+        font-size: 4.5vh; }
+      #container #projectsBody .project a {
+        text-decoration: none;
+        margin: 1% 0;
+        color: black;
+        font-size: 3.5vh; }
+      #container #projectsBody .project p {
+        font-size: 3.5vh; }
+      #container #projectsBody .project a:visited {
+        color: black; }
+      #container #projectsBody .project a:hover {
+        text-decoration: underline; }
+      #container #projectsBody .project p, #container #projectsBody .project a, #container #projectsBody .project h1 {
+        font-family: 'Athiti', serif; }
+
+/*# sourceMappingURL=style.css.map */

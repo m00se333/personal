@@ -1,0 +1,10 @@
+#content {
+  flex: 7;
+  overflow: scroll;
+  height: 100%;
+  display: flex; }
+  #content .postWrapper {
+    display: flex;
+    flex-direction: column; }
+
+/*# sourceMappingURL=content.css.map */
