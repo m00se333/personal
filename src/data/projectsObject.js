@@ -9,18 +9,17 @@ module.exports ={
   haloApp:{
     url: "warzonedata.herokuapp.com",
     github: "github.com/m00se333/haloApp",
-    description: ["This is a CRUD functional app that takes in a users Xbox Live Gamertag. The client captures that search and sends it off to my Express server. The Express server sends an AJAX request to the Halo Waypoint API and in response recieves data about the searched Gamertag's Warzone record in Halo 5. The response is handled by my Express server and data from the response is sent to a Firebase database. The client is listening for changes to the database and populates the DOM based on the information inside the Firebase database."
-                  ,"One hurdle I had to get through was the API calls to the Halo Waypoint API- I could not do it from the client and had to learn how to make AJAX requests using Express. It was a challenge but I am really proud of what I produced. I eventually want to refactor this project using the Destiny API."] 
+    description: ["My final project from General Assembly is something I am very proud of. This is a CRUD functional app that takes in a users Xbox Live Gamertag. The client captures that search and sends it off to my Express server. The Express server sends an AJAX request to the Halo Waypoint API and in response recieves data about the searched Gamertag's Warzone record in Halo 5. The response is handled by my Express server and data from the response is sent to a Firebase database. The client is listening for changes to the database and populates the DOM based on the information inside the Firebase database."
+                  ,"One hurdle I had to get through was the API calls to the Halo Waypoint API- I could not do it from the client and had to learn how to make AJAX requests using Express. It was a challenge, yet I came away with a good grasp of working with a database and how to use NodeJS beyond setting up a devServer."] 
   }
 
- //  ,
+  ,
 
- // testPoject:{
- //     url: "testURL@awesome.com",
- //     github: "github.com/88888djsd/awesome",
- //     description: ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fugit iure numquam praesentium, necessitatibus, quidem ipsum excepturi iusto blanditiis sapiente quia architecto minus, sunt ratione amet aliquam eaque ducimus deserunt.",
- //                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus velit culpa, deleniti voluptates. Deleniti itaque harum error! Ut modi necessitatibus illo, deserunt, tenetur sunt sed placeat ex cum voluptates quo?",
- //                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam est eaque dolorem pariatur repellat, voluptate vitae ex perferendis debitis esse vero qui saepe ratione nihil. Nostrum ipsam aliquam error."]
- //   }
+ bakeryDisplay:{
+     url: "michaelbakery/herokuapp.com",
+     github: "github.com/m00se333/michaelBakery",
+     description: ["Bakery Display is my most recent freelance opprotunity. This website is written in ES6 and React. I was also able to get creative with React CSSTransitionGroups, open the gallery and behold a slick entrance and exit that looks great across platforms. Ever since using learning flexbox life has been good."
+                    ,"Learning how to code using React has made coding really fun becuase I have a standardized approach to a project that I understand letting me take on more abitious projects. Stay tuned my client eventually wants a full fledged e commerce site!"]
+   }
   
 }
