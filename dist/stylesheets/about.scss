@@ -1,58 +1,60 @@
 @import "browserSizes";
 
+.aboutWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-#header{
+      #frameContainer{
+        margin-top: 1%;
+        width: 20%;
+        flex: 2;
+        display: flex;
 
-    display: flex;
-    flex: 1 1 100px;
-    flex-direction: column;
-    align-items: center;
+          
+          @media only screen and (orientation: portrait){
+            width: 70%;
+          }
 
-    @media #{$iphone_landscape, $iphone6Plus_landscape, $ipad_landscape}{
-      flex: 1 1 250px;
-    }
+          @media #{$ipad_portrait}{
+              width: 30%;
+            }
 
-    #frameContainer{
-      height: 250px;
-      width: 240px;
-      margin-top: 3%;
-      flex: 1 1 auto;
-      order: 1;
+          @media #{$ipad_landscape}{
+              width: 30%;
+            }
 
-      @media only screen and (orientation: portrait){
-          height: 35vh; 
-          width: 60%;    
-        }
+          img {
+            width: 100%;
+          }
+
     
 
-      @media #{$ipad_portrait}{
-          height: 35vh; 
-          width: 50%;
+  }
+    #aboutPostBody{
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1.6vw;
+      padding: 0 5%;
+      flex: 1;
+
+      #paragraphs{
+          display: flex;
+          flex-direction: column
         }
 
-      @media #{$ipad_landscape}{
-          margin-top: 1%;
-          width: 30%;
-          height: 38vh;
+        p{
+          font-family: 'Athiti', serif;
+          font-size: 3.5vh;
+
+          @media only screen and (orientation: portrait){
+            font-size: 3.5em;
+          }
+          @media only screen and (max-device-width: 736px) and (orientation: landscape){
+            font-size: 2.5em;
+          }
         }
-
-        img {
-          height: 100%;
-          width: 100%;
-        }
-
-    }
-
-
-    #imageCaption{
-        flex: 1 1 auto;
-        font-size: 2vh;
-        font-style: italic;
-        color: grey; 
-        order: 2;
-
-        @media only screen and (orientation: landscape){
-          font-size: 3vh;
-        } 
     }
 }
+
+

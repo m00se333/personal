@@ -1,41 +1,40 @@
-#header {
+.aboutWrapper {
   display: flex;
-  flex: 1 1 100px;
   flex-direction: column;
   align-items: center; }
-  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-    #header {
-      flex: 1 1 250px; } }
-  #header #frameContainer {
-    height: 250px;
-    width: 240px;
-    margin-top: 3%;
-    flex: 1 1 auto;
-    order: 1; }
+  .aboutWrapper #frameContainer {
+    margin-top: 1%;
+    width: 20%;
+    flex: 2;
+    display: flex; }
     @media only screen and (orientation: portrait) {
-      #header #frameContainer {
-        height: 35vh;
-        width: 60%; } }
+      .aboutWrapper #frameContainer {
+        width: 70%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: portrait) {
-      #header #frameContainer {
-        height: 35vh;
-        width: 50%; } }
+      .aboutWrapper #frameContainer {
+        width: 30%; } }
     @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) and (orientation: landscape) {
-      #header #frameContainer {
-        margin-top: 1%;
-        width: 30%;
-        height: 38vh; } }
-    #header #frameContainer img {
-      height: 100%;
+      .aboutWrapper #frameContainer {
+        width: 30%; } }
+    .aboutWrapper #frameContainer img {
       width: 100%; }
-  #header #imageCaption {
-    flex: 1 1 auto;
-    font-size: 2vh;
-    font-style: italic;
-    color: grey;
-    order: 2; }
-    @media only screen and (orientation: landscape) {
-      #header #imageCaption {
-        font-size: 3vh; } }
+  .aboutWrapper #aboutPostBody {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.6vw;
+    padding: 0 5%;
+    flex: 1; }
+    .aboutWrapper #aboutPostBody #paragraphs {
+      display: flex;
+      flex-direction: column; }
+    .aboutWrapper #aboutPostBody p {
+      font-family: 'Athiti', serif;
+      font-size: 3.5vh; }
+      @media only screen and (orientation: portrait) {
+        .aboutWrapper #aboutPostBody p {
+          font-size: 3.5em; } }
+      @media only screen and (max-device-width: 736px) and (orientation: landscape) {
+        .aboutWrapper #aboutPostBody p {
+          font-size: 2.5em; } }
 
 /*# sourceMappingURL=about.css.map */

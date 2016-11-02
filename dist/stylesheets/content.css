@@ -5,6 +5,8 @@
   display: flex; }
   #content .postWrapper {
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: column; }
 
 /*# sourceMappingURL=content.css.map */

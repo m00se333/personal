@@ -295,16 +295,11 @@ var About = React.createClass({
 
         return (
           
-            <div className="postWrapper">
-              <div id="header">
-                <div id="frameContainer">
-                  <img src={data.img} alt="Noble 6"/>
-                </div>
-                <span id="imageCaption">{data.imgCaption}</span>
+            <div className="aboutWrapper">
+              <div id="frameContainer">
+                <img src={data.img} alt="Noble 6"/>
               </div>
-              
-              
-              <div id="postBody">{this.formatPost()}</div>
+              <div id="aboutPostBody">{this.formatPost()}</div>
             </div>
           )
       }

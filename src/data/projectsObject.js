@@ -8,18 +8,18 @@ module.exports ={
   haloApp:{
     url: "warzonedata.herokuapp.com",
     github: "github.com/m00se333/haloApp",
-    description: ["This is a CRUD functional app that takes in a users Xbox Live Gamertag. The client captures that search and sends it off to my Express server. The Express server sends an AJAX request to the Halo Waypoint API and in response recieves data about the searched Gamertag's Warzone record in Halo 5. The response is handled by my Express server and data from the response is sent to a Firebase database. The client is listening for changes to the database and populates the DOM based on the information inside the Firebase database."
-                  ,"One hurdle I had to get through was the API calls to the Halo Waypoint API- I could not do it from the client and had to learn how to make AJAX requests using Express. It was a challenge but I am really proud of what I produced. I eventually want to refactor this project using the Destiny API."] 
+    description: ["My final project for General Assembly is something I am really proud of. This is a CRUD functional app that takes in a users Xbox Live Gamertag. The client captures that search and sends it off to my Express server. The Express server sends an AJAX request to the Halo Waypoint API and in response recieves data about the searched Gamertag's Warzone record in Halo 5. The response is handled by my Express server and data from the response is sent to a Firebase database. The client is listening for changes to the database and populates the DOM based on the information inside the Firebase database."
+                  ,"There was one giant hurdle with this project, the API. The Halo Waypoint API does not allow one using JavaScript to send requests to their API from the client side; so, I had to learn how to make AJAX requests using Node. It was a challenge but I came away with a project that incorporates Firebase, XMLHTTP requests, and templating to create an ugly yet functioning web app."] 
   }
 
- //  ,
+  ,
 
- // testPoject:{
- //     url: "testURL@awesome.com",
- //     github: "github.com/88888djsd/awesome",
- //     description: ["Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fugit iure numquam praesentium, necessitatibus, quidem ipsum excepturi iusto blanditiis sapiente quia architecto minus, sunt ratione amet aliquam eaque ducimus deserunt.",
- //                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus velit culpa, deleniti voluptates. Deleniti itaque harum error! Ut modi necessitatibus illo, deserunt, tenetur sunt sed placeat ex cum voluptates quo?",
- //                   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque laboriosam est eaque dolorem pariatur repellat, voluptate vitae ex perferendis debitis esse vero qui saepe ratione nihil. Nostrum ipsam aliquam error."]
- //   }
+ bakeryDisplay:{
+     url: "michaelbakery.herokuapp.com",
+     github: "github.com/m00se333/bakeryDisplay",
+     description: ["Bakery Display is my latest freelance project that I've contracted with a friend to grow his business. This web app is entirely written in React and ES6, this project is great practice in writing clean code and maintaining tidy file structure."
+                    ,"I also worked with React CSSTransitionGroups to create a slick entrance and exit for the gallery which is the main attraction of the app so far, so I wanted to make sure it was animated to procude a certain level of satisfaction for the user."
+                    , "Stay tuned becuase this is an e commerce site in the making."]
+   }
   
 }
