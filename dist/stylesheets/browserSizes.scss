@@ -33,3 +33,14 @@ $ipad_landscape: "only screen
     and (max-device-width : 1024px)
     and (-webkit-min-device-pixel-ratio: 1)  
     and (orientation : landscape)";
+
+$iphone5_landscape: "only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape)";
+
+$iphone5_portrait: "only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait)";
+

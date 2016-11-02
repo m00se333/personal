@@ -143,7 +143,7 @@ body {
         #container #postBody p {
           font-size: 2.5em; } }
   #container #projectBackground {
-    background-image: url("../public/test2o100.png");
+    background-image: url("../public/projectsPageBackground.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }

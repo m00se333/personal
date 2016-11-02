@@ -8,8 +8,8 @@ module.exports ={
   haloApp:{
     url: "warzonedata.herokuapp.com",
     github: "github.com/m00se333/haloApp",
-    description: ["My final project for General Assembly is something I am really proud of. This is a CRUD functional app that takes in a users Xbox Live Gamertag. The client captures that search and sends it off to my Express server. The Express server sends an AJAX request to the Halo Waypoint API and in response recieves data about the searched Gamertag's Warzone record in Halo 5. The response is handled by my Express server and data from the response is sent to a Firebase database. The client is listening for changes to the database and populates the DOM based on the information inside the Firebase database."
-                  ,"There was one giant hurdle with this project, the API. The Halo Waypoint API does not allow one using JavaScript to send requests to their API from the client side; so, I had to learn how to make AJAX requests using Node. It was a challenge but I came away with a project that incorporates Firebase, XMLHTTP requests, and templating to create an ugly yet functioning web app."] 
+    description: ["My final project from General Assembly is something I am very proud of. This is a CRUD functional app that takes in a users Xbox Live Gamertag. The client captures that search and sends it off to my Express server. The Express server sends an AJAX request to the Halo Waypoint API and in response recieves data about the searched Gamertag's Warzone record in Halo 5. The response is handled by my Express server and data from the response is sent to a Firebase database. The client is listening for changes to the database and populates the DOM based on the information inside the Firebase database."
+                  ,"One hurdle I had to get through was the API calls to the Halo Waypoint API- I could not do it from the client and had to learn how to make AJAX requests using Express. It was a challenge, yet I came away with a good grasp of working with a database and how to use NodeJS beyond setting up a devServer."] 
   }
 
   ,
