@@ -297,7 +297,7 @@ var About = React.createClass({
           
             <div className="aboutWrapper">
               <div id="frameContainer">
-                <img src={data.img} alt="Noble 6"/>
+                <img src={data.img} />
               </div>
               <div id="aboutPostBody">{this.formatPost()}</div>
             </div>
